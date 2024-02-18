@@ -5,7 +5,7 @@
 }
 
 a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -15,7 +15,18 @@ a:hover {
 }
 
 
+.localizacao{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.textolocalizacao{
+display: flex;
+justify-content: center;
+margin: 100px;
+align-items: center;
 
+}
 
 .logo {
   font-size: 24px;
@@ -126,7 +137,7 @@ margin: 50px;
 #myImg {
 
   margin: 100px;
-  max-width: 200px;
+  max-width: 500px;
   border: solid 1px rgb(0, 0, 0);
 }
 
