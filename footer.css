@@ -1,0 +1,58 @@
+.stretch {
+	align-content: stretch;
+}
+/* Flex Container */
+.container {
+	height: 300px;
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid #ccc;
+	flex-wrap: wrap;
+    background-color: #23232e;
+}
+/* Flex Item */
+.item {
+    margin: 10px;
+	flex: 1;
+	padding: 0 10px;
+	text-align: center;
+    font-size: 15px;
+    
+}
+.item1{
+font-size: 15px;
+
+}
+.item3{
+font-size: 16px;
+
+}
+.item3p{
+margin: 20px;
+}
+.footer{
+    
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #23232e;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+
+.imgitem1{
+    display: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+
+}
+
+
+
+.hrefitem1{
+opacity: 0.8;
+
+}
