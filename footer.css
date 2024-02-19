@@ -9,6 +9,7 @@
 	border: 1px solid #ccc;
 	flex-wrap: wrap;
     background-color: #23232e;
+    color: white;
 }
 /* Flex Item */
 .item {
