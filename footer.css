@@ -57,3 +57,26 @@ margin: 20px;
 opacity: 0.8;
 
 }
+
+
+
+
+
+
+.footer-payment_list{
+-webkit-text-size-adjust: 100%;
+line-height: 1.5;
+-webkit-tap-highlight-color: transparent;
+font-family: montserrat,sans-serif;
+font-size: .8rem;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+font-weight: bolder;
+color: #ffffff;
+box-sizing: border-box;
+padding: 0;
+list-style: none;
+fill: #ffffff;
+align-items: center;
+flex-wrap: wrap;
+margin: 20px;}
