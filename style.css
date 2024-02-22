@@ -4,6 +4,7 @@
  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
 
+
 a {
   color: #ffffff;
   text-decoration: none;
@@ -64,6 +65,14 @@ text-align: center;
 margin: 50px;
 
 }
+.navtotal {
+display: flex;
+position: fixed;
+width: 100%;
+
+}
+
+
 
 .nav-list {
   list-style: none;
@@ -73,6 +82,12 @@ margin: 50px;
 .nav-list li {
   letter-spacing: 3px;
   margin-left: 32px;
+}
+
+.imgapresentacao{
+width: 100%;
+display: flex;
+
 }
 
 .mobile-menu {
