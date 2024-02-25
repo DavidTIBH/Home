@@ -1,4 +1,4 @@
 # Mobile Navbar Menu
 
-Como Fazer um Menu Navbar Responsivo - Tutorial HTML, CSS e JavaScript para Iniciantes
+Site disponivel com as linguagens HTML, CSS e JavaScript, site em construção.
 # DavidTIBH
