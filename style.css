@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
- max-width: 100%;
 }
 
 
@@ -29,7 +28,7 @@ main {
     /*background: url("bg.png") no-repeat center center;*/
   background-color:#ffffff;
   background-size: cover;
-  height: 92vh;
+  height: 100vh;
 }
 main p {
 color: #000000;
