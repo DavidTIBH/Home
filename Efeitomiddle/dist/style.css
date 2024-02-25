@@ -19,7 +19,7 @@
   display: inline-block;
   min-width: 25%;
   flex: 1 1 25%;
-  color: #ccc;
+  color: #000000;
   text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.5s;
@@ -33,10 +33,10 @@
 }
 
 .tabs label:hover {
-  color: #3498db;
+  color: #000000;
 }
 .tabs label:hover .icon {
-  border-color: #3498db;
+  border-color: #000000;
   background-position: 50px 0;
   background-size: 100px 50px;
 }
@@ -73,11 +73,11 @@
 }
 .tabs [id^=tab]:checked + label {
   background: #FFF;
-  color: #3498db;
+  color: #000000;
 }
 
 .tabs [id^=tab]:checked + label i {
-  border-color: #3498db;
+  border-color: #000000;
   background-position: 50px 0;
   background-size: 100px 50px;
 }
