@@ -23,6 +23,10 @@ a:hover {
   letter-spacing: 4px;
 }
 
+.apresentacao{
+width: 100%;
+}
+
 main p {
 color: #000000;
 text-align: center;
