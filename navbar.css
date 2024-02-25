@@ -1,23 +1,44 @@
-.navbar{
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #23232e;
-    height: 8vh;
-    display: flex;
-  position: fixed;
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #23232e;
+  height: 8vh;
+ position: fixed;
   width: 100%;
-  transition: top 0.3s;
   top: 0;
-  }
+  transition: top 0.3s;
+}
 
-  .nav-list {
-    list-style: none;
-    display: flex;
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
   }
-  
-  .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
   }
   .nav-list {
     position: absolute;
@@ -35,19 +56,8 @@
   .nav-list li {
     margin-left: 0;
     opacity: 0;
-  }  
-
-.nav-list.active {
-  transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
   }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+  .mobile-menu {
+    display: block;
   }
 }
