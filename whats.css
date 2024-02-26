@@ -7,13 +7,13 @@ body {
 #whatsapp-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     background-color: #25d366;
     color: #fff;
     padding: 10px 15px;
-    border-radius: 5px;
     cursor: pointer;
     z-index: 1000;
+    border-radius: 50px;
 }
 
 #whatsapp-form {
