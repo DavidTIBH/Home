@@ -100,14 +100,14 @@ color: black;
   box-sizing: border-box;
 }
 
-.email-cal {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_sync.png");
+.numero1 {
+  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_log_call.png");
   background-position: 0 0;
   background-size: 100px 50px;
 }
 
-.snapshot {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_snapshots.png");
+.numero2 {
+  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_log_call.png");
   background-size: 100px 50px;
   background-position: 0 0;
 }
