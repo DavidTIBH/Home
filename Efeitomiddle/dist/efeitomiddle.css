@@ -101,49 +101,49 @@ color: black;
 }
 
 .numero1 {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_log_call.png");
+  background: white url("./1.png");
   background-position: 0 0;
   background-size: 100px 50px;
 }
 
 .numero2 {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_log_call.png");
+  background: white url("./2.png");
   background-size: 100px 50px;
   background-position: 0 0;
 }
 
-.inbox-apps {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_templates.png");
+.numero3 {
+  background: white url("./3.png");
   background-size: 100px 50px;
   background-position: 0 0;
 }
 
-.log-calls {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_log_call.png");
+.numero4 {
+  background: white url("./4.png");
   background-size: 100px 50px;
   background-position: 0 0;
 }
 
-.tracking {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_tracking.png");
+.numero5 {
+  background: white url("./5.png");
   background-size: 100px 50px;
   background-position: 0 0;
 }
 
-.book-meetigns {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_book_meeting.png");
+.numero6 {
+  background: white url("./6.png");
   background-size: 100px 50px;
   background-position: 0 0;
 }
 
-.send-later {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_send_later.png");
+.numero7 {
+  background: white url("./7.png");
   background-size: 100px 50px;
   background-position: 0 0;
 }
 
-.follow-up {
-  background: white url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/45910/icon_--_follow_up.png");
+.numero8 {
+  background: white url("./8.png");
   background-size: 100px 50px;
   background-position: 0 0;
 }
