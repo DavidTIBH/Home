@@ -1,6 +1,12 @@
 document.getElementById('whatsapp-button').addEventListener('click', function () {
-    document.getElementById('whatsapp-form').style.display = 'block';
+    var whatsappForm = document.getElementById('whatsapp-form');
+    if (whatsappForm.style.display === 'block') {
+        whatsappForm.style.display = 'none';
+    } else {
+        whatsappForm.style.display = 'block';
+    }
 });
+
 
 function sendWhatsApp() {
     var name = document.getElementById('name').value;
