@@ -35,11 +35,7 @@
 .tabs label:hover {
   color: #000000;
 }
-.tabs label:hover .icon {
-  border-color: #000000;
-  background-position: 50px 0;
-  background-size: 100px 50px;
-}
+
 
 .tab__content {
   display: none;
@@ -92,12 +88,25 @@ color: black;
 .icon {
   margin-top: 1rem;
   display: inline-block;
-  width: 54px;
-  height: 54px;
-  border-radius: 100%;
-  border: 2px solid #000000;
-  background-size: 100px 50px;
-  box-sizing: border-box;
+  width: 49px;
+  height: 50px;
+  background-size: 200px 50px;
+}
+
+.icon {
+  width: 49px; /* Largura inicial da imagem */
+  height: 50px; /* Altura inicial da imagem */
+  overflow: hidden; /* Esconde o conteúdo que extrapola os limites da caixa */
+
+}
+
+.icon {
+  transition: transform 0.5s; /* Adiciona uma transição suave ao efeito de zoom */
+
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Aumenta o tamanho da imagem em 20% ao passar o mouse */
 }
 
 .numero1 {
