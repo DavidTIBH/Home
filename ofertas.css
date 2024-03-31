@@ -1,65 +1,23 @@
-
-* {
-    margin: 0;
-    padding: 0;
+.stretch {
+	align-content: stretch;
 }
-
-
-.displaypai{
-display:flex;
-flex-wrap: wrap;
-width: 100%;
-margin-bottom: 20px;
-height: 100%;
+/* Flex Container */
+.container {
+	height: 300px;
+	margin: 0 auto;
+	display: flex;
+	border: 1px solid #ccc;
+	flex-wrap: wrap;
+    background-color: #23232e;
+    color: white;
+    height: 100%;
 }
-
-
-.displaypai img{ /*esse código é para a imagem dentro da box*/
-display: flex;
-justify-items: end;
-width: 100%;
-height: 100%;
+/* Flex Item */
+.item {
+    margin: 20px;
+	flex: 1;
+	padding: 0 10px;
+	text-align: center;
+    font-size: 15px;
+    
 }
-
-
-
-.display1{/*esse código é a box do display1*/
-    display: flex;
-    width: 659px;
-    height: 950px;
-   border: solid red 1px;
-}
-
-.display2{/*esse código é a box do display2*/
-    display: flex;
-    width: 659px;
-    height: 950px;
-   border: solid red 1px;
- }
-
-.imagem{/*esse código é a box da imagem dentro do display1 e 2*/
-    width: 100%;
-    display: flex;
-    border: solid rgb(10, 248, 216) 1px;
-    justify-content: center;
-}
-
-.texto{/*esse código é a box da imagem dentro do display1 e 2*/
-    display: block;
-    width: 100%;
-    border: solid rgb(8, 238, 96) 1px;
-text-align: center;
-margin-top: 10px;
-color: rgb(34, 30, 37);
-
-}
-
-.h2{
-margin-bottom: 6px;
-color: rgb(8, 6, 6);
-}
-
-.p{/*Espaçamento dentro da box de texto*/
-margin-top: 6px;
-}
-
