@@ -1,11 +1,61 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 .displaypai{
 display:flex;
 justify-content: space-evenly;
 }
 
 
-img{
+.displaypai img{
 display: flex;
 justify-items: end;
+margin-top: 10px;
+justify-content: left;
+width: 30%;
+height: ;
+}
+
+.displaypai p{
+    width: 30%;
+    height: auto;
+display: flex;
+align-items: right;
+border: blue 1px solid;
+text-align: right;
+}
+
+.display1{
+   width: 400px;
+   height: auto;
+   border: solid red 1px;
 
 }
+
+
+.display2{
+
+    width: 400px;
+    height: auto;
+    border: solid red 1px;
+ 
+ }
+
+.display3{
+    width: 400px;
+    height: auto;
+    border: solid red 1px;
+    
+ }
+
+
+.display4{
+    width: 400px;
+    height: auto;
+    border: solid red 1px;
+ 
+ }
