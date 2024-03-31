@@ -1,0 +1,11 @@
+.displaypai{
+display:flex;
+justify-content: space-evenly;
+}
+
+
+img{
+display: flex;
+justify-items: end;
+
+}
