@@ -9,7 +9,8 @@
 display:flex;
 flex-wrap: wrap;
 width: 100%;
-max-width: 100%;
+margin-bottom: 20px;
+height: 100%;
 }
 
 
@@ -25,14 +26,14 @@ height: 100%;
 .display1{/*esse código é a box do display1*/
     display: flex;
     width: 659px;
-    height: 600px;
+    height: 950px;
    border: solid red 1px;
 }
 
 .display2{/*esse código é a box do display2*/
     display: flex;
     width: 659px;
-    height: 600px;
+    height: 950px;
    border: solid red 1px;
  }
 
@@ -41,15 +42,16 @@ height: 100%;
     display: flex;
     border: solid rgb(10, 248, 216) 1px;
     justify-content: center;
-    width: 50%;
 }
 
 .texto{/*esse código é a box da imagem dentro do display1 e 2*/
-    width: 500px;
+    display: block;
+    width: 100%;
     border: solid rgb(8, 238, 96) 1px;
 text-align: center;
 margin-top: 10px;
 color: rgb(34, 30, 37);
+
 }
 
 .h2{
