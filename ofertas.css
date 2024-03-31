@@ -6,9 +6,10 @@
 
 
 .displaypai{
-display:block;
-align-content:  space-between;
-width: 100;
+display:flex;
+flex-wrap: wrap;
+width: 100%;
+max-width: 100%;
 }
 
 
@@ -23,14 +24,14 @@ height: 100%;
 
 .display1{/*esse código é a box do display1*/
     display: flex;
-    width: 700px;
+    width: 659px;
     height: 600px;
    border: solid red 1px;
 }
 
 .display2{/*esse código é a box do display2*/
     display: flex;
-    width: 700px;
+    width: 659px;
     height: 600px;
    border: solid red 1px;
  }
