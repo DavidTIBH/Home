@@ -11,34 +11,44 @@ justify-content: space-evenly;
 }
 
 
-.displaypai img{
+.displaypai img{ /*esse código é para a imagem dentro da box*/
 display: flex;
 justify-items: end;
 margin-top: 10px;
-justify-content: left;
-width: 30%;
-
+width: 50%;
 }
 
-.displaypai p{
+.displaypai p{/*esse código é para a texto dentro da box*/
 display: flex;
-align-items: right;
-border: blue 1px solid;
-text-align: right;
+justify-content: center;
 }
 
-.display1{
-   width: 400px;
-   height: auto;
+.display1{/*esse código é a box do display1*/
+    display: flex;
+    width: 700px;
+    height: 400px;
    border: solid red 1px;
-
 }
 
-
-.display2{
-
-    width: 400px;
-    height: auto;
-    border: solid red 1px;
- 
+.display2{/*esse código é a box do display2*/
+    display: flex;
+    width: 700px;
+    height: 400px;
+   border: solid red 1px;
  }
+
+.imagem{/*esse código é a box da imagem dentro do display1 e 2*/
+    width: 100%;
+    display: flex;
+    border: solid rgb(10, 248, 216) 1px;
+    justify-content: center;
+    width: 50%;
+}
+
+.texto{/*esse código é a box da imagem dentro do display1 e 2*/
+    width: 300px;
+display: flex;
+    border: solid rgb(8, 238, 96) 1px;
+justify-content: center;
+margin-top: 30px;
+}
