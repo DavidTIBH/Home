@@ -18,10 +18,7 @@ margin-top: 10px;
 width: 50%;
 }
 
-.displaypai p{/*esse código é para a texto dentro da box*/
-display: flex;
-justify-content: center;
-}
+
 
 .display1{/*esse código é a box do display1*/
     display: flex;
@@ -47,8 +44,9 @@ justify-content: center;
 
 .texto{/*esse código é a box da imagem dentro do display1 e 2*/
     width: 300px;
-display: flex;
     border: solid rgb(8, 238, 96) 1px;
-justify-content: center;
+text-align: center;
 margin-top: 30px;
+color: blueviolet;
 }
+
