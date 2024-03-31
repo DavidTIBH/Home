@@ -6,9 +6,9 @@
 
 
 .displaypai{
-display:flex;
-flex-direction: row;
-width: 100%;
+display:block;
+
+align-content:  space-between;
 }
 
 
