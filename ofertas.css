@@ -1,13 +1,14 @@
 
 .containerr {
 	display: block; /* Define como bloco por padrão */
+	margin-bottom: 30px;
   }
   
   /* Media Query para telas maiores que, por exemplo, 768px */
   @media screen and (min-width: 768px) {
 	.containerr {
 	  display: flex; /* Define como flexível em telas maiores */
-	  /* Adicione aqui suas propriedades flexíveis */
+
 	}
   }
   
@@ -23,10 +24,11 @@ margin-bottom: 30px;
 	flex: 1;
 	padding: 0 10px;
 	text-align: center;
-    font-size: 15px;
+width: 100%;
+	
 }
 
 .image1{
 width: 100%;
-
+border-radius: 3%;
 }
