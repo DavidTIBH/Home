@@ -166,3 +166,8 @@ color: black;
   background-size: 100px 50px;
   background-position: 0 0;
 }
+
+img{
+border-radius: 2%;
+  
+}
