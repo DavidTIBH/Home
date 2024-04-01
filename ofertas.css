@@ -19,7 +19,7 @@ margin-bottom: 30px;
   }
 
 /* Flex Item */
-.item {
+.item { /* Caixa que comporta a image1*/
     margin: 20px;
 	flex: 1;
 	padding: 0 10px;
@@ -28,7 +28,7 @@ width: 100%;
 	
 }
 
-.image1{
+.image1{/* Imagem que fica dentro da caixa item, qualquer alteração dessa imagem tem que ser feito aqui.*/
 width: 100%;
 border-radius: 3%;
 }
