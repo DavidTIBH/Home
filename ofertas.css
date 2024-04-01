@@ -1,14 +1,22 @@
-.stretch {
-	align-content: stretch;
-}
-/* Flex Container */
-.container {
-	height: 300px;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-    height: 100%;
-}
+
+.containerr {
+	display: block; /* Define como bloco por padrão */
+  }
+  
+  /* Media Query para telas maiores que, por exemplo, 768px */
+  @media screen and (min-width: 768px) {
+	.containerr {
+	  display: flex; /* Define como flexível em telas maiores */
+	  /* Adicione aqui suas propriedades flexíveis */
+	}
+  }
+  
+  .containerr{
+
+margin-bottom: 30px;
+
+  }
+
 /* Flex Item */
 .item {
     margin: 20px;
