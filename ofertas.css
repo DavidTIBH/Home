@@ -1,7 +1,6 @@
 
 .containerr {
 	display: block; /* Define como bloco por padrão */
-	margin-bottom: 30px;
   }
   
   /* Media Query para telas maiores que, por exemplo, 768px */
@@ -12,11 +11,6 @@
 	}
   }
   
-  .containerr{
-
-margin-bottom: 30px;
-
-  }
 
 /* Flex Item */
 .item { /* Caixa que comporta a image1*/
