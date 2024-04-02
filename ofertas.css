@@ -7,22 +7,23 @@
   @media screen and (min-width: 768px) {
 	.containerr {
 	  display: flex; /* Define como flexível em telas maiores */
+
 	}
   }
   
 
 /* Flex Item */
-.item:hover { /* Caixa que comporta a image1*/
+.boximagem { /* Caixa que comporta a image1*/
     margin: 20px;
 	flex: 1;
 	padding: 0 10px;
 	text-align: center;
 width: 89%;
-transform: scale(1.1);
+
 }
 
-.image1{/* Imagem que fica dentro da caixa item, qualquer alteração dessa imagem tem que ser feito aqui.*/
+
+.imagemefeito{/* Imagem que fica dentro da caixa item, qualquer alteração dessa imagem tem que ser feito aqui.*/
 width: 100%;
 border-radius: 3%;
-
 }
