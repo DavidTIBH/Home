@@ -4,28 +4,24 @@
         /* Adicione estilos específicos para telas menores */
       
 
-    
-           /* Por exemplo, você pode ajustar a largura dos elementos, ocultar ou reorganizar elementos, etc. */
-    }
-
-    .manutencao{
-
+        .manutencao{
             display: flex;
             width: 89%;
             padding: 30px;
-            margin: 1%;
+  
             height: 180vh;
             justify-content: center;
+        }
+           /* Por exemplo, você pode ajustar a largura dos elementos, ocultar ou reorganizar elementos, etc. */
+    }
 
-
-      }
       
       /* Media Query para telas maiores que, por exemplo, 768px */
       @media screen and (min-width: 768px) {
         .manutencao{
             display: flex;
             width: 89%;
-           
+            padding: 30px;
             margin: 1%;
             height: 180vh;
             justify-content: center;
