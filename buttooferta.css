@@ -1,4 +1,4 @@
-.btn {
+.btnn {
     padding: 10px 20px;
     background-color: #93f874;
     border: none;
@@ -9,13 +9,13 @@
     margin-top: 20px;
 border: #117c11 2px solid;
   }
-  .btn1{
+  .btn11{
 display: flex;
 margin-top: 20px;
 width: 100%;
 justify-content: center;
   }
   
-  .btn:hover {
+  .btnn:hover {
     background-color: #a2dda5;
   }
