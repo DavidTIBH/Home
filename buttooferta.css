@@ -9,9 +9,10 @@
     margin-top: 20px;
 border: #117c11 2px solid;
   }
-  .btn1{display: flex;
+  .btn1{
+display: flex;
 margin-top: 20px;
- width: 100%;
+width: 100%;
 justify-content: center;
   }
   
