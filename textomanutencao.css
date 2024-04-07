@@ -9,17 +9,13 @@
     }
 
     .manutencao{
-        display: block; /* Define como bloco por padrão */
 
-    
             display: flex;
-            width: 86%;
+            width: 89%;
             padding: 30px;
             margin: 1%;
             height: 180vh;
             justify-content: center;
-     
-
 
 
       }
@@ -28,8 +24,8 @@
       @media screen and (min-width: 768px) {
         .manutencao{
             display: flex;
-            width: 86%;
-            padding: 30px;
+            width: 89%;
+           
             margin: 1%;
             height: 180vh;
             justify-content: center;
