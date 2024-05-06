@@ -1,14 +1,13 @@
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232e;
   height: 8vh;
- position: fixed;
-  width: 100%;
   top: 0;
   transition: top 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
@@ -61,4 +60,10 @@ nav {
   .mobile-menu {
     display: block;
   }
+}
+
+
+.coisa{
+background-color: white;
+height: 100px;
 }
