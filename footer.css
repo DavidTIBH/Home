@@ -11,6 +11,7 @@
     background-color: #23232e;
     color: white;
 align-items: center;
+width: ;
 }
 /* Flex Item */
 .item {
@@ -21,9 +22,8 @@ align-items: center;
 }
 
 .footer{
-    
+   
     bottom: 0;
-    width: 100%;
     text-align: center;
 border-bottom:solid 1px #23232e;
     padding: 10px;
