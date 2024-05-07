@@ -61,13 +61,22 @@ nav {
     display: block;
   }
 }
+  @media only screen and (max-width: 600px) {
+    .logo {  background-image: url(Consultoriadeinformatica.png);
+      background-repeat: no-repeat;
+      background-color: white;
+      height: 140px;
+      background-position: center;
+      background-size: 100%;
+    }
+}
+/* Estilos para telas maiores */
+@media only screen and (min-width: 601px) {
+ .logo {  background-image: url(Consultoriadeinformatica.png);
+      background-repeat: no-repeat;
+      background-color: white;
+      height: 140px;
+      background-position: center;
 
-.logo{
-  background-image: url(Consultoriadeinformatica.png);
-  background-repeat: no-repeat;
-  background-color: white;
-  height: 140px;
-  background-position: center;
-  background-size: 95%;
-  
-  }
+    }
+}
