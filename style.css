@@ -16,24 +16,6 @@ a:hover {
 
 
 
-.logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-.apresentacao{
-width: 100%;
-}
-
-main p {
-color: #000000;
-text-align: center;
-margin: 50px;
-
-}
-
-
 .mobile-menu {
   display: none;
   cursor: pointer;
@@ -61,12 +43,7 @@ margin: 50px;
 }
 
 
-#myImg {
 
-  margin: 100px;
-  max-width: 500px;
-  border: solid 1px rgb(0, 0, 0);
-}
 
 .modal {
   display: none;
