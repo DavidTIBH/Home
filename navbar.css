@@ -3,11 +3,10 @@ nav {
   justify-content: left;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #636060;
+  background: #292727;
   height: 8vh;
   top: 0;
   transition: top 0.3s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
@@ -46,7 +45,7 @@ nav {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: #000000;
+    background: #292727;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
