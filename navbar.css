@@ -3,7 +3,7 @@ nav {
   justify-content: left;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #23232e;
+  background: #636060;
   height: 8vh;
   top: 0;
   transition: top 0.3s;
@@ -46,7 +46,7 @@ nav {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: #23232e;
+    background: #000000;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -63,7 +63,10 @@ nav {
 }
 
 
-.coisa{
+.logo{
+background-image: url(Consultoriadeinformatica.png);
+background-repeat: no-repeat;
 background-color: white;
-height: 100px;
+height: 140px;
+background-position: center;
 }
