@@ -1,10 +1,12 @@
 nav {
   display: flex;
-  justify-content: left;
+  justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: #292727;
+  background: #23232e;
   height: 8vh;
+ position: fixed;
+  width: 100%;
   top: 0;
   transition: top 0.3s;
 }
@@ -45,7 +47,7 @@ nav {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: #292727;
+    background: #23232e;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -59,13 +61,4 @@ nav {
   .mobile-menu {
     display: block;
   }
-}
-
-
-.logo{
-background-image: url(Consultoriadeinformatica.png);
-background-repeat: no-repeat;
-background-color: white;
-height: 140px;
-background-position: center;
 }
