@@ -5,7 +5,6 @@ nav {
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   background: #23232e;
   height: 8vh;
- position: fixed;
   width: 100%;
   top: 0;
   transition: top 0.3s;
