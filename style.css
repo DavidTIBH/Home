@@ -88,12 +88,16 @@ height: 100%;
   .imgtxt {
       margin: 20px 0;
       text-align: center;
+      
   }
+  .imgsize {
+  width: 100%;
+margin-top: 5%;
+margin-bottom: 5%;    
+}
 }
 
-
-
-
+@media only screen and (min-width: 601px) {
 .pagina{
   margin-top: 4%;
   padding: 6%;
@@ -112,6 +116,7 @@ background-color: #e4e1e141;
 
 width: 700px;
 height: 300;
+
 }
 
 
@@ -119,5 +124,4 @@ height: 300;
   margin-left: 20px;
   
 }
-
-
+}
