@@ -82,6 +82,7 @@ height: 100%;
 /* Media queries para dispositivos menores */
 @media only screen and (max-width: 600px) {
   .pagina {
+    margin-top: 5%;
       flex-direction: column;
       align-items: center;
   }
