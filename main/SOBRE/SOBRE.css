@@ -15,7 +15,18 @@
   margin-bottom: 5%; 
      
   }
+  .maintxt1 {
+    margin-left: 20px;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 2.0;
   }
+  .maintxt1 h2 {
+  font-weight: normal;
+  }
+}
   
   @media only screen and (min-width: 601px) {
   .pagina1{
@@ -49,8 +60,8 @@
     line-height: 2.0;
     color: rgb(255, 255, 255);
   }
-  }
   .maintxt1 h2 {
   font-weight: normal;
   color: rgb(255, 255, 255);
   }
+}

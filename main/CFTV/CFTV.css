@@ -15,6 +15,17 @@
   margin-top: 5%;
   margin-bottom: 5%;    
   }
+  .maintxt {
+    margin-left: 20px;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 2.0;
+  }
+  }
+  .maintxt h2 {
+  font-weight: normal;
   }
   
   @media only screen and (min-width: 601px) {
