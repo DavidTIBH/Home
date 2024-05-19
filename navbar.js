@@ -22,10 +22,20 @@ document.querySelectorAll('nav a').forEach(anchor => {
         const targetId = this.getAttribute('href').substring(1); // Obtém o ID da seção alvo
         const targetSection = document.getElementById(targetId); // Obtém a seção alvo
 
-        // Rola suavemente para a seção alvo
-        targetSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        // Verifica se o navegador suporta a rolagem suave
+        if ('scrollBehavior' in document.documentElement.style) {
+            // Rola suavemente para a seção alvo
+            targetSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        } else {
+            // Fallback para rolagem normal
+            const offsetTop = targetSection.offsetTop;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
     });
 });
