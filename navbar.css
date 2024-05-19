@@ -29,6 +29,7 @@
   }
   
   .nav-list li {
+    border-bottom:solid 1px #23232e;
     letter-spacing: 3px;
     margin-left: 16px; /* Espaço entre as opções */
   }
