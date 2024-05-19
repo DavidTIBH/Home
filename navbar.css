@@ -1,184 +1,79 @@
-
-/* Estilos para dispositivos móveis ou telas de tamanho reduzido */
 @media only screen and (max-width: 600px) {
-  nav a {
-    float: none;
-    display: block;
-    text-align: center;
+  .logo {  background-image: url(Consultoriadeinformatica.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 140px;
+    background-position: center;
+    background-size: 100%;
+  }
 
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background:  #c2c0c038;
+    height: 8vh;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+    justify-content: left;
+  }
+  
+  .nav-list {
+   font-size: 14px;
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+}
+/* Estilos para telas maiores */
+@media only screen and (min-width: 601px) {
+.logo {  background-image: url(Consultoriadeinformatica.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 140px;
+    background-position: center;
 
-
-    @media only screen and (max-width: 600px) {
-      .logo {  background-image: url(Consultoriadeinformatica.png);
-        background-repeat: no-repeat;
-        background-color: white;
-        height: 140px;
-        background-position: center;
-        background-size: 100%;
-      }
-    
-      nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        background:  #c2c0c038;
-        height: 8vh;
-        width: 100%;
-        top: 0;
-        transition: top 0.3s;
-        justify-content: left;
-      }
-      
-      .nav-list {
-       font-size: 14px;
-        list-style: none;
-        display: flex;
-      }
-      
-      .nav-list li {
-        letter-spacing: 3px;
-        margin-left: 32px;
-      }
-    }
-    /* Estilos para telas maiores */
-    @media only screen and (min-width: 601px) {
-    .logo {  background-image: url(Consultoriadeinformatica.png);
-        background-repeat: no-repeat;
-        background-color: white;
-        height: 140px;
-        background-position: center;
-    
-      }
-      nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-        background: #c2c0c038;
-        height: 8vh;
-        width: 100%;
-        top: 0;
-        transition: top 0.3s;
-        justify-content: left;
-      }
-      
-      .nav-list {
-       font-size: 14px;
-        list-style: none;
-        display: flex;
-      }
-      
-      .nav-list li {
-        letter-spacing: 3px;
-        margin-left: 32px;
-      }
-    }
-    
-    :target:before {
-      content: "";
-      display: block;
-      height: 50px; /* Ajuste conforme necessário */
-      margin: -50px 0 0; /* Ajuste conforme necessário */
-    }
-    
-
-    
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background: #c2c0c038;
+    height: 8vh;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+    justify-content: left;
+  }
+  
+  .nav-list {
+   font-size: 14px;
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
   }
 }
 
-@media only screen and (min-width: 601px) {
-
-
-
-
-  @media only screen and (max-width: 600px) {
-    .logo {  background-image: url(Consultoriadeinformatica.png);
-      background-repeat: no-repeat;
-      background-color: white;
-      height: 140px;
-      background-position: center;
-      background-size: 100%;
-    }
-  
-    nav {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      font-family: "Red Hat Display", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 300;
-      font-style: normal;
-      background:  #c2c0c038;
-      height: 8vh;
-      width: 100%;
-      top: 0;
-      transition: top 0.3s;
-      justify-content: left;
-    }
-    
-    .nav-list {
-     font-size: 14px;
-      list-style: none;
-      display: flex;
-    }
-    
-    .nav-list li {
-      letter-spacing: 3px;
-      margin-left: 32px;
-    }
-  }
-  /* Estilos para telas maiores */
-  @media only screen and (min-width: 601px) {
-  .logo {  background-image: url(Consultoriadeinformatica.png);
-      background-repeat: no-repeat;
-      background-color: white;
-      height: 140px;
-      background-position: center;
-  
-    }
-    nav {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      font-family: "Red Hat Display", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 300;
-      font-style: normal;
-      background: #c2c0c038;
-      height: 8vh;
-      width: 100%;
-      top: 0;
-      transition: top 0.3s;
-      justify-content: left;
-    }
-    
-    .nav-list {
-     font-size: 14px;
-      list-style: none;
-      display: flex;
-    }
-    
-    .nav-list li {
-      letter-spacing: 3px;
-      margin-left: 32px;
-    }
-  }
-  
-  :target:before {
-    content: "";
-    display: block;
-    height: 50px; /* Ajuste conforme necessário */
-    margin: -50px 0 0; /* Ajuste conforme necessário */
-  }
-  
-
-
-  
+:target:before {
+  content: "";
+  display: block;
+  height: 50px; /* Ajuste conforme necessário */
+  margin: -50px 0 0; /* Ajuste conforme necessário */
 }
