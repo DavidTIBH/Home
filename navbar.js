@@ -12,3 +12,20 @@ window.onscroll = function() {
 
     prevScrollpos = currentScrollPos;
 }
+
+
+// Função para rolar suavemente para a seção correspondente ao clicar nos links da navegação
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault(); // Impede o comportamento padrão do link
+
+        const targetId = this.getAttribute('href').substring(1); // Obtém o ID da seção alvo
+        const targetSection = document.getElementById(targetId); // Obtém a seção alvo
+
+        // Rola suavemente para a seção alvo
+        targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
