@@ -25,8 +25,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap; /* Permitir que os itens quebrem em várias linhas */
-    flex: 1 50%; /* Ocupar metade da largura disponível em cada linha */
-    margin: 0;
+    margin: 20px;
 
   }
   
