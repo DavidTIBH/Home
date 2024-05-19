@@ -8,9 +8,6 @@
   }
 
   nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -22,17 +19,29 @@
     transition: top 0.3s;
     justify-content: left;
   }
-  
+
   .nav-list {
    font-size: 14px;
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Permitir que os itens quebrem em várias linhas */
+    flex: 1 50%; /* Ocupar metade da largura disponível em cada linha */
+    margin: 0;
+
   }
   
   .nav-list li {
     letter-spacing: 3px;
     margin-left: 32px;
   }
+
+  :target:before {
+    content: "";
+    display: block;
+    height: 50px; /* Ajuste conforme necessário */
+    margin: -50px 0 0; /* Ajuste conforme necessário */
+  }
+
 }
 /* Estilos para telas maiores */
 @media only screen and (min-width: 601px) {
@@ -43,6 +52,7 @@
     background-position: center;
 
   }
+
   nav {
     display: flex;
     justify-content: space-around;
@@ -69,11 +79,12 @@
     letter-spacing: 3px;
     margin-left: 32px;
   }
-}
 
-:target:before {
+  :target:before {
   content: "";
   display: block;
   height: 50px; /* Ajuste conforme necessário */
   margin: -50px 0 0; /* Ajuste conforme necessário */
 }
+}
+
