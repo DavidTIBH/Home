@@ -17,7 +17,6 @@
     background: #c2c0c038;
     height: auto; /* Remova a altura fixa */
     transition: top 0.3s;
-    justify-content: left;
   }
 
   .nav-list {
@@ -26,6 +25,7 @@
     display: flex;
     flex-wrap: wrap; /* Permitir que os itens quebrem em várias linhas */
     padding: 0;
+    justify-content: left;
   }
   
   .nav-list li {
@@ -65,13 +65,13 @@
     width: 100%;
     top: 0;
     transition: top 0.3s;
-    justify-content: left;
   }
   
   .nav-list {
    font-size: 14px;
     list-style: none;
     display: flex;
+    justify-content: left;
   }
   
   .nav-list li {
@@ -85,11 +85,6 @@
   height: 50px; /* Ajuste conforme necessário */
   margin: -50px 0 0; /* Ajuste conforme necessário */
 }
-}
-
-
-
-
 
 
 
@@ -97,7 +92,8 @@
 
 .navbar-access {
   display: flex;
-  align-items: center;
+
+  
 }
 
 #access-form {
@@ -140,4 +136,5 @@
 
 #error-text {
   margin: 0;
+}
 }

@@ -42,7 +42,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 
 // IDs de acesso permitidos
-var allowedIDs = ["ID1", "ID2", "ID3"]; // Adicione quantos IDs quiser aqui
+var allowedIDs = ["TESTE", "TESTE2", "TESTE3"]; // Adicione quantos IDs quiser aqui
 
 document.getElementById("form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent default form submission
