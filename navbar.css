@@ -87,3 +87,57 @@
 }
 }
 
+
+
+
+
+
+
+
+
+.navbar-access {
+  display: flex;
+  align-items: center;
+}
+
+#access-form {
+  margin: 0;
+}
+
+#access-form input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#access-form input[type="submit"] {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.error-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.error-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#error-text {
+  margin: 0;
+}

@@ -39,3 +39,27 @@ document.querySelectorAll('nav a').forEach(anchor => {
         }
     });
 });
+
+
+// IDs de acesso permitidos
+var allowedIDs = ["ID1", "ID2", "ID3"]; // Adicione quantos IDs quiser aqui
+
+document.getElementById("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+    var accessCode = document.getElementById("access-code").value; // Get the value from input field
+    // Check if the access code matches any of the allowed IDs
+    if (allowedIDs.includes(accessCode)) {
+        // If access granted, redirect to your desired HTML file
+        window.location.href = "seuarquivo.html";
+    } else {
+        // If access denied, display error message
+        var errorMessage = document.getElementById("error-message");
+        var errorText = document.getElementById("error-text");
+        errorMessage.style.display = "block";
+        errorText.innerText = "Código de acesso incorreto.";
+    }
+});
+
+document.getElementById("error-close").addEventListener("click", function() {
+    document.getElementById("error-message").style.display = "none";
+});
