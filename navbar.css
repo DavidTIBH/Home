@@ -100,6 +100,22 @@
   margin: 0;
 }
 
+.form{
+text-align: center;
+}
+
+.login{
+
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #000000;
+    border: none; /* Removendo a borda */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+
+}
+
 #access-form input[type="text"] {
   padding: 10px;
   margin-right: 10px;

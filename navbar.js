@@ -56,7 +56,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
         var errorMessage = document.getElementById("error-message");
         var errorText = document.getElementById("error-text");
         errorMessage.style.display = "block";
-        errorText.innerText = "Código de acesso incorreto.";
+        errorText.innerText = "Senha de acesso incorreto.";
     }
 });
 
