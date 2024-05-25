@@ -79,3 +79,48 @@ a:hover {
     width: 60%;
   }
 }
+
+
+/* Estilos para dispositivos móveis  assim a imagem fica a baixo do texto no mobile*/
+@media only screen and (max-width: 600px) {
+  .pagina, .pagina1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .maintxt, .maintxt1 {
+    order: 1; /* Altera a ordem do texto */
+  }
+  
+  .mainimg, .mainimg1 {
+    order: 2; /* Altera a ordem da imagem */
+    margin-bottom: 20px; /* Adiciona margem inferior */
+  }
+}
+
+.maintxt {
+  font-size: 16px; /* Tamanho base da fonte para telas menores */
+}
+
+/* Consulta de mídia para telas maiores */
+@media screen and (min-width: 1080px) {
+  .maintxt {
+      font-size: 25px; /* Ajuste o tamanho da fonte para telas maiores */
+  }
+  .maintxt1 {
+    font-size: 25px; /* Ajuste o tamanho da fonte para telas maiores */
+}
+}
+
+/* Consulta de mídia para telas ainda maiores */
+@media screen and (min-width: 720px) {
+  .maintxt {
+      font-size: 16px; /* Ajuste o tamanho da fonte para telas ainda maiores */
+  }
+  .maintxt1 {
+    font-size: 16px; /* Ajuste o tamanho da fonte para telas maiores */
+}
+}
+
