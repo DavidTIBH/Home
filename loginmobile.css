@@ -19,6 +19,11 @@ body {
     height: 100vh;
 }
 
+
+
+/* Estilos para telas menores */
+@media only screen and (max-width: 600px) {
+
 /* Formulário */
 .login-form {
     width: 100%;
@@ -33,7 +38,23 @@ img{   width: 100%;
 align-items: center;
 justify-content: center;
 
-}
+}}
+
+/* Estilos para telas maiores */
+@media only screen and (min-width: 720px) {
+
+    .login-form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    img{
+    align-items: center;
+    justify-content: center;
+    
+    }}
+
 /* Input de texto */
 .form-input {
     width: 100%;
