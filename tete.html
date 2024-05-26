@@ -5,25 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulário de Cadastro</title>
 <style>
-    /* Estilos simples para formatar o formulário e a lista */
-    body {
-        font-family: Arial, sans-serif;
-    }
-    form {
-        margin-bottom: 20px;
-    }
-    input[type="text"] {
-        width: 300px;
-        padding: 5px;
-        margin-right: 10px;
-    }
-    button {
-        padding: 5px 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
+    /* Estilos simples para formatar a lista */
     ul {
         list-style-type: none;
         padding: 0;
@@ -40,7 +22,7 @@
         <input type="text" id="nome" required>
         <label for="url">URL:</label>
         <input type="text" id="url" required>
-        <button type="submit">Cadastrar</button>
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
     </form>
 
     <h2>Cadastros:</h2>
@@ -49,49 +31,43 @@
     <script>
         // Função para adicionar um novo cadastro
         function adicionarCadastro(nome, url) {
-            var cadastro = {
-                nome: nome,
-                url: url
-            };
-            // Adicionando o cadastro ao localStorage
-            var cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
-            cadastros.push(cadastro);
-            localStorage.setItem('cadastros', JSON.stringify(cadastros));
-        }
-
-        // Função para exibir os cadastros salvos
-        function exibirCadastros() {
-            var cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
             var listaCadastros = document.getElementById('listaCadastros');
-            listaCadastros.innerHTML = '';
-            cadastros.forEach(function(cadastro) {
-                var li = document.createElement('li');
-                li.textContent = cadastro.nome + ': ' + cadastro.url;
-                listaCadastros.appendChild(li);
-            });
+            var li = document.createElement('li');
+            li.textContent = nome + ': ' + url;
+            listaCadastros.appendChild(li);
         }
 
-        // Adicionando evento de submit ao formulário
-        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita que o formulário seja enviado
-
-            // Obtém os valores do formulário
+        // Função para cadastrar um novo item
+        function cadastrar() {
             var nome = document.getElementById('nome').value;
             var url = document.getElementById('url').value;
-
-            // Adiciona o novo cadastro
             adicionarCadastro(nome, url);
-
-            // Limpa os campos do formulário
+            atualizarComentario(nome, url);
+            // Limpar os campos após cadastrar
             document.getElementById('nome').value = '';
             document.getElementById('url').value = '';
+        }
 
-            // Atualiza a lista de cadastros exibida
-            exibirCadastros();
-        });
+        // Função para atualizar o comentário com os novos dados
+        function atualizarComentario(nome, url) {
+            var comment = `<!-- Nome: ${nome}, URL: ${url} -->`;
+            document.getElementById('cadastroData').innerHTML += comment;
+        }
 
-        // Exibe os cadastros ao carregar a página
-        exibirCadastros();
+        // Ao carregar a página, recuperar os dados dos comentários
+        window.onload = function() {
+            var commentData = document.getElementById('cadastroData').innerHTML;
+            var regex = /<!-- Nome: (.*?), URL: (.*?) -->/g;
+            var match;
+            while ((match = regex.exec(commentData)) !== null) {
+                adicionarCadastro(match[1], match[2]);
+            }
+        };
     </script>
+
+    <!-- Comentários para armazenar os dados -->
+    <div id="cadastroData">
+        <!-- Nome: Primeiro Cadastro, URL: http://exemplo.com -->
+    </div>
 </body>
 </html>
