@@ -52,6 +52,12 @@
 
   }
 
+  .acesso{
+    /* Login não mostrará em dispositivos desktop */
+display: none;
+
+  }
+
   nav {
     display: flex;
     justify-content: space-around;
@@ -156,12 +162,16 @@ text-align: center;
 }
 
 
-/* Sistema login não mostrará em dispositivos mobiles */
 @media only screen and (max-width: 600px) {
   
-  
+  .inicioo{
+    /* inicio não mostrará em dispositivos mobiles */
+display: none;
+
+  }
   
 .navbar-access {
+  /* Sistema login não mostrará em dispositivos mobiles */
   display: none; 
   
 }
