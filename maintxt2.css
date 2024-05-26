@@ -9,6 +9,8 @@
     .maintxt {
         margin: 20px 0;
         text-align: center;
+        justify-content: center;
+        text-align: center;
         
     }
     .imgsize {
@@ -23,10 +25,14 @@
     font-weight: 300;
     font-style: normal;
     line-height: 2.0;
+    justify-content: center;
+    text-align: center;
   }
   }
   .maintxt h2 {
   font-weight: normal;
+  justify-content: center;
+  text-align: center;
   }
   
   @media only screen and (min-width: 601px) {
@@ -59,8 +65,12 @@
     font-weight: 300;
     font-style: normal;
     line-height: 2.0;
+    justify-content: center;
+    text-align: center;
   }
   }
   .maintxt h2 {
   font-weight: normal;
+  justify-content: center;
+  text-align: center;
   }
