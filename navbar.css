@@ -154,3 +154,79 @@ text-align: center;
   margin: 0;
 }
 }
+
+
+/* Sistema login não mostrará em dispositivos mobiles */
+@media only screen and (max-width: 600px) {
+  
+  
+  
+.navbar-access {
+  display: none; 
+  
+}
+
+#access-form {
+  margin: 0;
+
+}
+
+.form{
+text-align: center;
+}
+
+.login{
+display: none; 
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #000000;
+    border: none; /* Removendo a borda */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+
+}
+
+#access-form input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  display: none; 
+}
+
+#access-form input[type="submit"] {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: none; 
+}
+
+.error-message {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  
+
+}
+
+.error-close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  display: none; 
+}
+
+#error-text {
+  margin: 0;
+  display: none; 
+}
+    }
