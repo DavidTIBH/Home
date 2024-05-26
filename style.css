@@ -73,14 +73,7 @@ a:hover {
   color: white;
 }
 
-/* Media Query for Screens Larger than 1280px by 800px */
-@media screen and (min-width: 1280px) and (min-height: 800px) {
-  .modal-content {
-    width: 60%;
-    align-items: center;
-    text-align: center;
-  }
-}
+
 
 
 /* Estilos para dispositivos móveis  assim a imagem fica a baixo do texto no mobile*/
@@ -89,15 +82,13 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    justify-content: center;
   }
   
   .maintxt, .maintxt1 {
     order: 1; /* Altera a ordem do texto */
     align-items: center;
     text-align: center;
-    justify-content: center;
+    padding: 5%;
   }
   
   .mainimg, .mainimg1 {
@@ -105,20 +96,7 @@ a:hover {
     margin-bottom: 20px; /* Adiciona margem inferior */
     align-items: center;
     text-align: center;
-    justify-content: center;
   }
-}
-
-.maintxt {
-  align-items: center;
-  text-align: center;
-  font-size: 16px; /* Tamanho base da fonte para telas menores */
-}
-.maintxt1 {
-  align-items: center;
-  text-align: center;
-  font-size: 16px; /* Tamanho base da fonte para telas menores */
-  justify-content: center;
 }
 
 @media only screen and (max-width: 720px) {
@@ -127,14 +105,13 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: center;
   }
   
   .maintxt, .maintxt1 {
     order: 1; /* Altera a ordem do texto */
     align-items: center;
     text-align: center;
-    justify-content: center;
+    padding: 5%;
   }
   
   .mainimg, .mainimg1 {
@@ -144,18 +121,7 @@ a:hover {
   }
 }
 
-.maintxt {
-  align-items: center;
-  text-align: center;
-  font-size: 16px; /* Tamanho base da fonte para telas menores */
-  
-}
-.maintxt1 {
-  align-items: center;
-  text-align: center;
-  font-size: 16px; /* Tamanho base da fonte para telas menores */
-  justify-content: center;
-}
+
 
 /* Consulta de mídia para telas maiores */
 @media screen and (min-width: 1080px) {
