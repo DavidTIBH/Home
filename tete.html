@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Cadastro</title>
+<style>
+    /* Estilos simples para formatar o formulário e a lista */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    form {
+        margin-bottom: 20px;
+    }
+    input[type="text"] {
+        width: 300px;
+        padding: 5px;
+        margin-right: 10px;
+    }
+    button {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+    <h2>Formulário de Cadastro</h2>
+    <form id="cadastroForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <label for="url">URL:</label>
+        <input type="text" id="url" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Cadastros:</h2>
+    <ul id="listaCadastros"></ul>
+
+    <script>
+        // Função para adicionar um novo cadastro
+        function adicionarCadastro(nome, url) {
+            var cadastro = {
+                nome: nome,
+                url: url
+            };
+            // Adicionando o cadastro ao localStorage
+            var cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
+            cadastros.push(cadastro);
+            localStorage.setItem('cadastros', JSON.stringify(cadastros));
+        }
+
+        // Função para exibir os cadastros salvos
+        function exibirCadastros() {
+            var cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
+            var listaCadastros = document.getElementById('listaCadastros');
+            listaCadastros.innerHTML = '';
+            cadastros.forEach(function(cadastro) {
+                var li = document.createElement('li');
+                li.textContent = cadastro.nome + ': ' + cadastro.url;
+                listaCadastros.appendChild(li);
+            });
+        }
+
+        // Adicionando evento de submit ao formulário
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que o formulário seja enviado
+
+            // Obtém os valores do formulário
+            var nome = document.getElementById('nome').value;
+            var url = document.getElementById('url').value;
+
+            // Adiciona o novo cadastro
+            adicionarCadastro(nome, url);
+
+            // Limpa os campos do formulário
+            document.getElementById('nome').value = '';
+            document.getElementById('url').value = '';
+
+            // Atualiza a lista de cadastros exibida
+            exibirCadastros();
+        });
+
+        // Exibe os cadastros ao carregar a página
+        exibirCadastros();
+    </script>
+</body>
+</html>
