@@ -40,7 +40,7 @@
 </head>
 <body>
 
-<form id="cadastroForm">
+<form id="cadastroForm" action="salvar_cadastro.php" method="post">
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome" required>
     <label for="url">URL do site:</label>
@@ -50,56 +50,19 @@
 
 <div class="cadastros">
     <h2>Cadastros:</h2>
-    <ul id="listaCadastros">
-        <!-- Aqui serão exibidos os cadastros -->
+    <ul>
+        <?php
+            // Lendo os cadastros do arquivo
+            $cadastros = file("cadastros.txt");
+
+            // Exibindo os cadastros
+            foreach ($cadastros as $cadastro) {
+                $dados = explode("|", $cadastro);
+                echo "<li>$dados[0] - $dados[1]</li>";
+            }
+        ?>
     </ul>
 </div>
-
-<script>
-    // Função para armazenar os dados no navegador
-    function cadastrar() {
-        var nome = document.getElementById('nome').value;
-        var url = document.getElementById('url').value;
-        
-        // Verifica se há cadastro previamente armazenado
-        var cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
-        
-        // Adiciona o novo cadastro ao array
-        cadastros.push({ nome: nome, url: url });
-        
-        // Atualiza o armazenamento local
-        localStorage.setItem('cadastros', JSON.stringify(cadastros));
-        
-        // Limpa os campos do formulário
-        document.getElementById('nome').value = '';
-        document.getElementById('url').value = '';
-        
-        // Atualiza a lista de cadastros exibida
-        listarCadastros();
-        
-        // Impede o envio do formulário
-        return false;
-    }
-    
-    // Função para exibir os cadastros armazenados
-    function listarCadastros() {
-        var cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
-        var listaCadastros = document.getElementById('listaCadastros');
-        listaCadastros.innerHTML = ''; // Limpa a lista antes de atualizar
-        
-        // Percorre os cadastros e os adiciona à lista
-        cadastros.forEach(function(cadastro) {
-            var li = document.createElement('li');
-            li.textContent = cadastro.nome + ' - ' + cadastro.url;
-            listaCadastros.appendChild(li);
-        });
-    }
-    
-    // Chama a função de listar cadastros ao carregar a página
-    window.onload = function() {
-        listarCadastros();
-    }
-</script>
 
 </body>
 </html>
