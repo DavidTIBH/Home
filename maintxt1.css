@@ -4,6 +4,7 @@
       margin-top: 5%;
         flex-direction: column;
         align-items: center;
+        background-color: #23232e;
     }
     .maintxt1 {
         margin: 20px 0;
@@ -18,17 +19,19 @@
      
   }
   .maintxt1 {
-   
+
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
     line-height: 2.0;
+    color: rgb(255, 255, 255);
     justify-content: center;
     text-align: center;
   }
   .maintxt1 h2 {
   font-weight: normal;
+  color: rgb(255, 255, 255);
   justify-content: center;
   text-align: center;
   }
