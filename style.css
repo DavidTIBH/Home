@@ -99,35 +99,6 @@ a:hover {
   }
 }
 
-@media only screen and (max-width: 720px) {
-  .pagina, .pagina1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .maintxt, .maintxt1 {
-    order: 1; /* Altera a ordem do texto */
-    align-items: center;
-    text-align: center;
-  }
-  
-  .mainimg, .mainimg1 {
-    order: 2; /* Altera a ordem da imagem */
-    margin-bottom: 20px; /* Adiciona margem inferior */
-    
-  }
-}
-
-
-
-
-
-
-
-
-
 
 /* Consulta de mídia para telas maiores */
 @media screen and (min-width: 1080px) {

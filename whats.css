@@ -11,16 +11,35 @@ body {
     padding: 10px 15px;
     cursor: pointer;
     z-index: 1000;
-max-width: 10%;
-max-height: 10%;
+max-width: 13%;
+max-height: 13%;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    #whatsapp-button {
+        position: fixed;
+        bottom: 1px;
+        right: 1px;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 1000;
+    max-width: 23%;
+    max-height: 23%;
+    
+    }
+    
+
 
 }
 
 #whatsapp-form {
     display: none;
     position: fixed;
-    bottom: 80px;
-    right: 20px;
+    bottom: 120px;
+    right: 40px;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
