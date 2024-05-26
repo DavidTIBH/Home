@@ -15,7 +15,7 @@ window.onscroll = function() {
 
 
 // Função para rolar suavemente para a seção correspondente ao clicar nos links da navegação
-document.querySelectorAll('nav a').forEach(anchor => {
+document.querySelectorAll('[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault(); // Impede o comportamento padrão do link
 
