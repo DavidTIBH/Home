@@ -50,7 +50,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
     // Check if the access code matches any of the allowed IDs
     if (allowedIDs.includes(accessCode)) {
         // If access granted, redirect to your desired HTML file
-        window.location.href = "seuarquivo.html";
+        window.location.href = "acessorestrito.html";
     } else {
         // If access denied, display error message
         var errorMessage = document.getElementById("error-message");
