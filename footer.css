@@ -21,7 +21,8 @@
         margin: 0 auto;
         flex: 1;
         text-align: center;
-        font-size: 15px;  
+        font-size: 15px; 
+        color: white; 
     }
     
     .footer{
@@ -31,11 +32,6 @@
     border-bottom:solid 1px #23232e;
         padding: 10px;
         font-size: 15px;
-    }
-    .numerocolor{
-color: white;
-
-
     }
 
 }
