@@ -95,12 +95,17 @@ a:hover {
   
   .maintxt, .maintxt1 {
     order: 1; /* Altera a ordem do texto */
-    
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
   
   .mainimg, .mainimg1 {
     order: 2; /* Altera a ordem da imagem */
     margin-bottom: 20px; /* Adiciona margem inferior */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -109,7 +114,12 @@ a:hover {
   text-align: center;
   font-size: 16px; /* Tamanho base da fonte para telas menores */
 }
-
+.maintxt1 {
+  align-items: center;
+  text-align: center;
+  font-size: 16px; /* Tamanho base da fonte para telas menores */
+  justify-content: center;
+}
 
 @media only screen and (max-width: 720px) {
   .pagina, .pagina1 {
@@ -122,12 +132,15 @@ a:hover {
   
   .maintxt, .maintxt1 {
     order: 1; /* Altera a ordem do texto */
-    
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
   
   .mainimg, .mainimg1 {
     order: 2; /* Altera a ordem da imagem */
     margin-bottom: 20px; /* Adiciona margem inferior */
+    
   }
 }
 
@@ -135,6 +148,13 @@ a:hover {
   align-items: center;
   text-align: center;
   font-size: 16px; /* Tamanho base da fonte para telas menores */
+  
+}
+.maintxt1 {
+  align-items: center;
+  text-align: center;
+  font-size: 16px; /* Tamanho base da fonte para telas menores */
+  justify-content: center;
 }
 
 /* Consulta de mídia para telas maiores */
