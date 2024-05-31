@@ -4,9 +4,14 @@
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
- //YOUR COPIED FIREBASE PART SHOULD BE HERE
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
- };
+    apiKey: "AIzaSyBXnKBEDni2jBA-x8BWbb51CZtwUHWptgU",
+    authDomain: "mister-tech-d2edb.firebaseapp.com",
+    projectId: "mister-tech-d2edb",
+    storageBucket: "mister-tech-d2edb.appspot.com",
+    messagingSenderId: "104842966810",
+    appId: "1:104842966810:web:40707e7010f86e65e09ea3",
+    measurementId: "G-GL2S2L8BCN"
+  };
 
  // Initialize Firebase
  const app = initializeApp(firebaseConfig);
