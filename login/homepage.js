@@ -3,9 +3,15 @@ import {getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/fire
 import{getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
 
 const firebaseConfig = {
-    //YOUR COPIED FIREBASE PART SHOULD BE HERE
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
-  };
+    apiKey: "AIzaSyBXnKBEDni2jBA-x8BWbb51CZtwUHWptgU",
+    authDomain: "mister-tech-d2edb.firebaseapp.com	",
+    databaseURL: "https://SEU_DOMÍNIO.firebaseio.com",
+    projectId: "mister-tech-d2edb",
+    storageBucket: "https://console.firebase.google.com/u/0/project/mister-tech-d2edb/storage/mister-tech-d2edb.appspot.com/files?hl=pt-brgs://mister-tech-d2edb.appspot.com",
+    messagingSenderId: "SEU_SENDER_ID",
+    appId: "mister-tech-d2edb.firebaseapp.com	"
+};
+
  
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
