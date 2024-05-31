@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Programas</title>
+    <!-- Adicione o SDK do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"></script>
+    <script>
+        // Configuração do Firebase
+    const firebaseConfig = {
+  apiKey: "AIzaSyDOK2QXVQ9XbozfNHREVw1Cr4nGxnWFoN0",
+  authDomain: "loginmistertech.firebaseapp.com",
+  projectId: "loginmistertech",
+  storageBucket: "loginmistertech.appspot.com",
+  messagingSenderId: "480926979614",
+  appId: "1:480926979614:web:892177cac626f8be9b000f",
+  measurementId: "G-MP6GWE5EH4"
+};
+
+        // Inicializa o Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Referência para o banco de dados do Firebase
+        const database = firebase.database();
+
+        // Função para cadastrar um programa no Firebase
+        function cadastrarPrograma() {
+            const programName = document.getElementById('programName').value;
+            const programLink = document.getElementById('programLink').value;
+
+            // Insere os dados no banco de dados
+            database.ref('programas').push({
+                nome: programName,
+                link: programLink
+            });
+
+            // Limpa os campos do formulário
+            document.getElementById('programName').value = '';
+            document.getElementById('programLink').value = '';
+        }
+
+        // Função para exibir a lista de programas cadastrados
+        function exibirProgramas() {
+            const programList = document.getElementById('programList');
+
+            // Remove os programas existentes da lista
+            programList.innerHTML = '';
+
+            // Obtém os programas do banco de dados
+            database.ref('programas').once('value', function(snapshot) {
+                snapshot.forEach(function(childSnapshot) {
+                    const program = childSnapshot.val();
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = program.link;
+                    link.textContent = program.nome;
+                    link.target = '_blank';
+                    listItem.appendChild(link);
+                    programList.appendChild(listItem);
+                });
+            });
+        }
+
+        // Chama a função para exibir os programas ao carregar a página
+        window.onload = exibirProgramas;
+    </script>
+</head>
+<body>
+    <h1>Cadastro de Programas</h1>
+
+    <!-- Formulário para cadastrar programas -->
+    <label for="programName">Nome do Programa:</label>
+    <input type="text" id="programName" required>
+    <label for="programLink">Link do Programa:</label>
+    <input type="text" id="programLink" required>
+    <button onclick="cadastrarPrograma()">Cadastrar Programa</button>
+
+    <!-- Lista de programas cadastrados -->
+    <h2>Programas Cadastrados</h2>
+    <ul id="programList">
+        <!-- Os programas serão adicionados aqui dinamicamente -->
+    </ul>
+</body>
+</html>
