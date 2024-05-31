@@ -4,13 +4,13 @@
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
-    apiKey: "AIzaSyBXnKBEDni2jBA-x8BWbb51CZtwUHWptgU",
-    authDomain: "mister-tech-d2edb.firebaseapp.com",
-    projectId: "mister-tech-d2edb",
-    storageBucket: "mister-tech-d2edb.appspot.com",
-    messagingSenderId: "104842966810",
-    appId: "1:104842966810:web:40707e7010f86e65e09ea3",
-    measurementId: "G-GL2S2L8BCN"
+    apiKey: "AIzaSyDOK2QXVQ9XbozfNHREVw1Cr4nGxnWFoN0",
+    authDomain: "loginmistertech.firebaseapp.com",
+    projectId: "loginmistertech",
+    storageBucket: "loginmistertech.appspot.com",
+    messagingSenderId: "480926979614",
+    appId: "1:480926979614:web:892177cac626f8be9b000f",
+    measurementId: "G-MP6GWE5EH4"
   };
 
  // Initialize Firebase
