@@ -10,8 +10,9 @@ button:hover{
 button, div{
 }
 
-span{
-    font-weight:600;
-    font-size:22px;
-    color:rgb(190, 29, 29);
+.perfil{
+    margin-top: 10px;
+    font-weight:400;
+    font-size:18px;
+    color:rgb(190, 29, 29);  
 }
