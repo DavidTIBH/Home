@@ -51,7 +51,7 @@ const firebaseConfig = {
     localStorage.removeItem('loggedInUserId');
     signOut(auth)
     .then(()=>{
-        window.location.href='index.html';
+        window.location.href='https://consultoriamt.com.br';
     })
     .catch((error)=>{
         console.error('Error Signing out:', error);
