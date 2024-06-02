@@ -90,3 +90,31 @@
     })
  })
 
+  
+  // Função para abrir a popup
+  function openPopup() {
+    document.getElementById("popup").style.display = "block";
+  }
+  
+  // Função para fechar a popup
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+  
+  // Função para enviar e-mail de redefinição de senha
+  function sendPasswordResetEmail() {
+    const email = document.getElementById("email").value;
+  
+    if (email) {
+      auth.sendPasswordResetEmail(email)
+        .then(() => {
+          alert("Um e-mail de recuperação foi enviado para " + email);
+          closePopup();
+        })
+        .catch((error) => {
+          console.error("Erro ao enviar e-mail de recuperação:", error.message);
+          alert("Ocorreu um erro ao enviar o e-mail de recuperação. Por favor, verifique seu endereço de e-mail e tente novamente.");
+        });
+    }
+  }
+  
