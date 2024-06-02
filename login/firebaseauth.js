@@ -77,7 +77,7 @@
         showMessage('login is successful', 'signInMessage');
         const user=userCredential.user;
         localStorage.setItem('loggedInUserId', user.uid);
-        window.location.href='https://consultoriamt.com.br/acessorestrito.html';
+        window.location.href='https://consultoriamt.com.br/homepage.html';
     })
     .catch((error)=>{
         const errorCode=error.code;
