@@ -79,6 +79,11 @@ max-height: 100%;
     position:absolute;
     color:black;
 }
+input:focus{
+    background-color: transparent;
+    outline:transparent;
+    border-bottom:2px solid #07001f;
+}
 input::placeholder{
     color:transparent;
 }
@@ -89,6 +94,11 @@ label{
     top:-1.3em;
     cursor:auto;
     transition:0.3s ease all;
+}
+input:focus~label,input:not(:placeholder-shown)~label{
+    top:-3em;
+    color:#07001f;
+    font-size:15px;
 }
 .recover{
     text-align:right;
