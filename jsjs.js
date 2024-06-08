@@ -23,24 +23,27 @@
    credential: admin.credential.cert(serviceAccount)
  });
  
- async function resetPassword(email) {
+
+  async function resetPassword() {
+    const email = document.getElementById('email').value;
     try {
-      const user = await admin.auth().getUserByEmail(email);
-      await admin.auth().updateUser(user.uid, {
-        password: 'nova-senha-gerada'
+      const response = await fetch('/reset-password', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email })
       });
-      console.log('Senha redefinida com sucesso para o usuário:', user.email);
-      return true;
+      const result = await response.json();
+      if (result.success) {
+        alert('Um e-mail de redefinição de senha foi enviado para ' + email);
+      } else {
+        alert('Falha ao redefinir senha. Verifique o e-mail fornecido.');
+      }
     } catch (error) {
       console.error('Erro ao redefinir senha:', error);
-      return false;
+      alert('Erro ao redefinir senha. Por favor, tente novamente mais tarde.');
     }
   }
-  resetPassword('emaildo@usuario.com')
-  .then(success => {
-    if (success) {
-      console.log('Senha redefinida com sucesso!');
-    } else {
-      console.log('Falha ao redefinir senha.');
-    }
-  });
+
+  document.getElementById('resetPasswordBtn').addEventListener('click', resetPassword);

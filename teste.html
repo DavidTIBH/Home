@@ -9,31 +9,6 @@
   <h1>Redefinir Senha</h1>
   <input type="email" id="email" placeholder="Digite seu e-mail"><br>
   <button id="resetPasswordBtn">Redefinir Senha</button>
-
-  <script>
-    async function resetPassword() {
-      const email = document.getElementById('email').value;
-      try {
-        const response = await fetch('/reset-password', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email })
-        });
-        const result = await response.json();
-        if (result.success) {
-          alert('Um e-mail de redefinição de senha foi enviado para ' + email);
-        } else {
-          alert('Falha ao redefinir senha. Verifique o e-mail fornecido.');
-        }
-      } catch (error) {
-        console.error('Erro ao redefinir senha:', error);
-        alert('Erro ao redefinir senha. Por favor, tente novamente mais tarde.');
-      }
-    }
-
-    document.getElementById('resetPasswordBtn').addEventListener('click', resetPassword);
-  </script>
+  <script src="jsjs.js"></script>
 </body>
 </html>
