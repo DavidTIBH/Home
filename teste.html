@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Reset</title>
-    <!-- Adicione o SDK do Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
-    <script>
-        // Configuração do Firebase
-        const firebaseConfig = {
-    apiKey: "AIzaSyDOK2QXVQ9XbozfNHREVw1Cr4nGxnWFoN0",
-    authDomain: "loginmistertech.firebaseapp.com",
-    projectId: "loginmistertech",
-    storageBucket: "loginmistertech.appspot.com",
-    messagingSenderId: "480926979614",
-    appId: "1:480926979614:web:892177cac626f8be9b000f",
-    measurementId: "G-MP6GWE5EH4"
-  };
-
-        // Inicialize o Firebase
-        firebase.initializeApp(firebaseConfig);
-
-        // Função para redefinir a senha
-        function resetPassword() {
-            var emailAddress = document.getElementById("email").value;
-
-            firebase.auth().sendPasswordResetEmail(emailAddress)
-                .then(function () {
-                    // Email de redefinição enviado
-                    alert("Um e-mail de redefinição de senha foi enviado para " + emailAddress);
-                })
-                .catch(function (error) {
-                    // Trate erros aqui
-                    var errorCode = error.code;
-                    var errorMessage = error.message;
-                    console.error(errorCode, errorMessage);
-                    alert(errorMessage);
-                });
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redefinir Senha</title>
 </head>
 <body>
-    <h2>Redefinir Senha</h2>
-    <p>Digite seu e-mail registrado para redefinir a senha:</p>
-    <input type="email" id="email" placeholder="Seu e-mail"><br><br>
-    <button onclick="resetPassword()">Redefinir Senha</button>
+  <h1>Redefinir Senha</h1>
+  <input type="email" id="email" placeholder="Digite seu e-mail"><br>
+  <button id="resetPasswordBtn">Redefinir Senha</button>
+
+  <script>
+    async function resetPassword() {
+      const email = document.getElementById('email').value;
+      try {
+        const response = await fetch('/reset-password', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email })
+        });
+        const result = await response.json();
+        if (result.success) {
+          alert('Um e-mail de redefinição de senha foi enviado para ' + email);
+        } else {
+          alert('Falha ao redefinir senha. Verifique o e-mail fornecido.');
+        }
+      } catch (error) {
+        console.error('Erro ao redefinir senha:', error);
+        alert('Erro ao redefinir senha. Por favor, tente novamente mais tarde.');
+      }
+    }
+
+    document.getElementById('resetPasswordBtn').addEventListener('click', resetPassword);
+  </script>
 </body>
 </html>
