@@ -1,7 +1,6 @@
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
  import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
- import { sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
@@ -102,40 +101,5 @@
     document.getElementById("popup").style.display = "none";
   }
   
-  // Função para enviar e-mail de redefinição de senha
-  function sendPasswordResetEmail() {
-    const email = document.getElementById("email").value;
-  
-    if (email) {
-      auth.sendPasswordResetEmail(email)
-        .then(() => {
-          alert("Um e-mail de recuperação foi enviado para " + email);
-          closePopup();
-        })
-        .catch((error) => {
-          console.error("Erro ao enviar e-mail de recuperação:", error.message);
-          alert("Ocorreu um erro ao enviar o e-mail de recuperação. Por favor, verifique seu endereço de e-mail e tente novamente.");
-        });
-    }
-  }
 
 
-
-
-  // Função para enviar e-mail de redefinição de senha
-function sendPasswordResetEmail() {
-  const email = document.getElementById("email").value;
-  const auth = getAuth(); // Obter a instância de autenticação do Firebase
-  
-  if (email) {
-    sendPasswordResetEmail(auth, email) // Chamar a função do Firebase para enviar o e-mail de redefinição
-      .then(() => {
-        alert("Um e-mail de recuperação foi enviado para " + email);
-        closePopup();
-      })
-      .catch((error) => {
-        console.error("Erro ao enviar e-mail de recuperação:", error.message);
-        alert("Ocorreu um erro ao enviar o e-mail de recuperação. Por favor, verifique seu endereço de e-mail e tente novamente.");
-      });
-  }
-}

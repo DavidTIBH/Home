@@ -15,29 +15,18 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Função para enviar e-mail de redefinição de senha
+
+// Function to send password reset email
 function sendPasswordResetEmail() {
-  const email = document.getElementById("email").value;
+    const email = document.getElementById('email').value;
 
-  if (email) {
-    auth.sendPasswordResetEmail(email)
-      .then(() => {
-        alert("Um e-mail de recuperação foi enviado para " + email);
-        closePopup();
-      })
-      .catch((error) => {
-        console.error("Erro ao enviar e-mail de recuperação:", error.message);
-        alert("Ocorreu um erro ao enviar o e-mail de recuperação. Por favor, verifique seu endereço de e-mail e tente novamente.");
-      });
-  }
-}
-
-// Função para abrir a popup
-function openPopup() {
-  document.getElementById("popup").style.display = "block";
-}
-
-// Função para fechar a popup
-function closePopup() {
-  document.getElementById("popup").style.display = "none";
+    // Send password reset email using Firebase Authentication
+    firebase.auth().sendPasswordResetEmail(email)
+        .then(() => {
+            alert('Password reset email sent successfully.');
+        })
+        .catch((error) => {
+            console.error('Error sending password reset email:', error);
+            alert('Error sending password reset email. Please check your email address and try again.');
+        });
 }
