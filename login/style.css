@@ -101,15 +101,14 @@ input:focus~label,input:not(:placeholder-shown)~label{
     font-size:15px;
 }
 .recover{
-    text-align:right;
+    float: right;
+display: flex;
     font-size:1rem;
-    margin-bottom:1rem;
-
-}
-.recover {
-    text-decoration:none;
+     text-decoration:none;
     color:rgb(0, 0, 0);
+cursor: pointer;
 }
+
 .recover:hover{
     color:rgba(53, 52, 52, 0.603);
     text-decoration:underline;
