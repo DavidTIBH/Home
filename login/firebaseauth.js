@@ -90,16 +90,5 @@
     })
  })
 
-  
-  // Função para abrir a popup
-  function openPopup() {
-    document.getElementById("popup").style.display = "block";
-  }
-  
-  // Função para fechar a popup
-  function closePopup() {
-    document.getElementById("popup").style.display = "none";
-  }
-  
 
 
