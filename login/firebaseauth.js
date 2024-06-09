@@ -91,14 +91,16 @@
  })
 
 
- const sendPasswordResetEmail = getAuth();
- sendPasswordResetEmail = ()=>{
- sendPasswordResetEmail(auth, email)
-   .then(() => {
-    console.error("teste", error);
-   })
 
-    .catch((error)=>{
-        console.error("error writing document", error);
-
-    })}
+  const email = document.getElementById('email').value;
+  const auth = getAuth();
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      // Password reset email sent!
+      // ..
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+    });
