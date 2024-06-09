@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Authentication</title>
+</head>
+<body>
+  <h1>Firebase Authentication</h1>
+
+  <!-- Formulário para cadastro -->
+  <h2>Cadastro</h2>
+  <form id="signup-form">
+    <label for="email">Email:</label><br>
+    <input type="email" id="signup-email" required><br>
+    <label for="password">Senha:</label><br>
+    <input type="password" id="signup-password" required><br>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <!-- Formulário para login -->
+  <h2>Login</h2>
+  <form id="signin-form">
+    <label for="email">Email:</label><br>
+    <input type="email" id="signin-email" required><br>
+    <label for="password">Senha:</label><br>
+    <input type="password" id="signin-password" required><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- Formulário para redefinição de senha -->
+  <h2>Redefinição de Senha</h2>
+  <form id="reset-form">
+    <label for="email">Email:</label><br>
+    <input type="email" id="reset-email" required><br>
+    <button type="submit">Enviar Email de Redefinição</button>
+  </form>
+
+  <!-- Script para manipulação do Firebase Authentication -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <script>
+ const firebaseConfig = {
+    apiKey: "AIzaSyDOK2QXVQ9XbozfNHREVw1Cr4nGxnWFoN0",
+    authDomain: "loginmistertech.firebaseapp.com",
+    projectId: "loginmistertech",
+    storageBucket: "loginmistertech.appspot.com",
+    messagingSenderId: "480926979614",
+    appId: "1:480926979614:web:892177cac626f8be9b000f",
+    measurementId: "G-MP6GWE5EH4"
+  };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    // Cadastro
+    const signupForm = document.getElementById('signup-form');
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('signup-email').value;
+      const password = document.getElementById('signup-password').value;
+      auth.createUserWithEmailAndPassword(email, password)
+        .then(() => {
+          console.log("Usuário cadastrado com sucesso!");
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    });
+
+    // Login
+    const signinForm = document.getElementById('signin-form');
+    signinForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('signin-email').value;
+      const password = document.getElementById('signin-password').value;
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+          console.log("Usuário logado com sucesso!");
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    });
+
+    // Redefinição de Senha
+    const resetForm = document.getElementById('reset-form');
+    resetForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('reset-email').value;
+      auth.sendPasswordResetEmail(email)
+        .then(() => {
+          console.log("E-mail de redefinição de senha enviado!");
+        })
+        .catch((error) => {
+          console.error(error.message);
+        });
+    });
+  </script>
+</body>
+</html>
