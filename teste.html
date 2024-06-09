@@ -1,75 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication</title>
-    <style>
-        /* Estilos CSS */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .message {
-            display: none;
-            position: fixed;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redefinição de Senha</title>
 </head>
 <body>
-    <h1>Authentication</h1>
+  <h1>Redefinição de Senha</h1>
 
-    <!-- Formulário de registro -->
-    <form id="signUpForm">
-        <input type="email" id="rEmail" placeholder="Email" required><br>
-        <input type="password" id="rPassword" placeholder="Password" required><br>
-        <input type="text" id="fName" placeholder="First Name" required><br>
-        <input type="text" id="lName" placeholder="Last Name" required><br>
-        <button id="submitSignUp">Sign Up</button>
-    </form>
-
-    <!-- Formulário de login -->
-    <form id="signInForm">
-        <input type="email" id="email" placeholder="Email" required><br>
-        <input type="password" id="password" placeholder="Password" required><br>
-        <button id="submitSignIn">Sign In</button>
-    </form>
-
-    <!-- Mensagens -->
-    <div id="signUpMessage" class="message"></div>
-    <div id="signInMessage" class="message"></div>
-
-    <!-- Popup para redefinição de senha -->
-    <div id="popup" class="popup">
-        <h2>Redefinir Senha</h2>
-        <input type="email" id="resetEmail" placeholder="Email" required><br>
-        <button onclick="sendPasswordResetEmail()">Enviar</button>
-        <button onclick="closePopup()">Cancelar</button>
-    </div>
-
-    <!-- Botão para abrir popup de redefinição de senha -->
-    <button onclick="openPopup()">Esqueceu sua senha?</button>
-
-    <!-- JavaScript -->
-    <script>
-        // Seu código JavaScript aqui
-    </script>
+  <div id="popup">
+    <input type="email" id="email" placeholder="Digite seu e-mail">
+    <button onclick="sendPasswordResetEmail()">Enviar E-mail de Redefinição de Senha</button>
+    <button onclick="closePopup()">Fechar</button>
+  </div>
 </body>
+
+<script src="./login/firebaseauth.js"></script>
+
+
 </html>
