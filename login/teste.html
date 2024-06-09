@@ -1,10 +1,10 @@
-<span id="open-popup" style="cursor: pointer; float: right;">Redefinição de senha</span>
+<span id="open-popup" style="cursor: pointer;">Redefinição de senha</span>
 
 <div id="popup" class="popup">
   <span id="close-popup" class="close-btn">×</span>
   <form id="reset-form">
-    <label for="reset-email" class="label-email">Email:</label><br>
-    <input type="email" id="reset-email" required placeholder=" "><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="reset-email" required placeholder="Exemplo email"><br>
     <button type="submit">Enviar Email de Redefinição</button>
   </form>
 </div>
@@ -19,17 +19,15 @@
   background-color: white; /* Removendo a transparência */
   padding: 20px;
   border: 1px solid #ccc;
-  border-radius: 10px; /* Arredondando as bordas */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adicionando uma sombra nas bordas */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 9999;
   width: 80%;
   max-width: 400px;
+  transition: transform 0.3s ease; /* Adicionando transição para o efeito de hover */
 }
 
-.popup label.label-email {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+.popup:hover {
+  transform: scale(1.05); /* Aumentando o tamanho do pop-up no hover */
 }
 
 .popup label,
@@ -38,10 +36,6 @@
   display: block;
   margin-bottom: 10px;
   width: 100%;
-}
-
-.popup input[type="email"] {
-  padding: 10px;
 }
 
 .popup button {

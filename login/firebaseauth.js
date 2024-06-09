@@ -91,17 +91,16 @@ const auth = getAuth(); // Get the Auth object
     })
  })
 
-
- // Redefinição de Senha
- const resetForm = document.getElementById('reset-form');
- resetForm.addEventListener('submit', (e) => {
-   e.preventDefault();
-   const email = document.getElementById('reset-email').value;
-   sendPasswordResetEmail(auth, email)
-     .then(() => {
-       console.log("E-mail de redefinição de senha enviado!");
-     })
-     .catch((error) => {
-       console.error(error.message);
-     });
- });
+// Redefinição de Senha
+const resetForm = document.getElementById('reset-form');
+resetForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = document.getElementById('reset-email').value;
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      console.log("E-mail de redefinição de senha enviado!");
+    })
+    .catch((error) => {
+      console.error(error.message);
+    });
+});
