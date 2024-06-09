@@ -1,27 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redefinição de Senha</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <!-- Include Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js"></script>
+    <!-- Include your Firebase config -->
+    <script>
+        // Your Firebase configuration
+        var firebaseConfig = {
+            apiKey: "SuaApiKey",
+            authDomain: "SeuAuthDomain.firebaseapp.com",
+            projectId: "SeuProjetoId",
+            storageBucket: "SeuStorageBucket.appspot.com",
+            messagingSenderId: "SeuMessagingSenderId",
+            appId: "SuaAppId",
+            measurementId: "SuaMeasurementId"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Include your JavaScript file -->
+    <script src="jsjs.js"></script>
+    <style>
+        /* Style for the popup */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-  <h1>Redefinição de Senha</h1>
+    <h2>Reset Password</h2>
+    <form onsubmit="event.preventDefault(); sendPasswordResetEmail();">
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <button type="submit">Send Reset Email</button>
+    </form>
 
-  <div id="popup">
-    <input type="email" id="email" placeholder="Digite seu e-mail">
-    <button onclick="sendPasswordResetEmail()">Enviar E-mail de Redefinição de Senha</button>
-    <button onclick="closePopup()">Fechar</button>
-  </div>
-
-
-
-  <button onclick="sendPasswordResetEmail()">Enviar E-mail de Redefinição de Senha</button>
-
+    <!-- Popup div -->
+    <div id="popup">
+        <p>Password reset email sent!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
 </body>
-
-
-<script src="jsjs.js"></script>
-
-
 </html>
