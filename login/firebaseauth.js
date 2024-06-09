@@ -89,3 +89,18 @@
         }
     })
  })
+
+
+ function resetPassword() {
+    const email = document.getElementById("email").value;
+    const auth = getAuth();
+    sendPasswordResetEmail(auth, email)
+        .then(() => {
+            // Email de redefinição de senha enviado com sucesso
+            alert("Email de redefinição de senha enviado com sucesso!");
+        })
+        .catch((error) => {
+            // Trate os erros
+            alert("Ocorreu um erro ao enviar o email de redefinição de senha: " + error.message);
+        });
+}
