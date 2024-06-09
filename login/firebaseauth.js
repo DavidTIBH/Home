@@ -2,7 +2,8 @@
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
  import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
- 
+ import { getAuth, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+
  const firebaseConfig = {
     apiKey: "AIzaSyDOK2QXVQ9XbozfNHREVw1Cr4nGxnWFoN0",
     authDomain: "loginmistertech.firebaseapp.com",
@@ -90,5 +91,16 @@
     })
  })
 
+ import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
-
+ const auth = getAuth();
+ sendPasswordResetEmail(auth, email)
+   .then(() => {
+     // Password reset email sent!
+     // ..
+   })
+   .catch((error) => {
+     const errorCode = error.code;
+     const errorMessage = error.message;
+     // ..
+   });
