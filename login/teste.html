@@ -1,81 +1,40 @@
-<span id="open-popup" style="cursor: pointer;">Redefinição de senha</span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Authentication</title>
+</head>
+<body>
+  <h1>Firebase Authentication</h1>
 
-<div id="popup" class="popup">
-  <span id="close-popup" class="close-btn">×</span>
+  <!-- Formulário para cadastro -->
+  <h2>Cadastro</h2>
+  <form id="signup-form">
+    <label for="email">Email:</label><br>
+    <input type="email" id="signup-email" required><br>
+    <label for="password">Senha:</label><br>
+    <input type="password" id="signup-password" required><br>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <!-- Formulário para login -->
+  <h2>Login</h2>
+  <form id="signin-form">
+    <label for="email">Email:</label><br>
+    <input type="email" id="signin-email" required><br>
+    <label for="password">Senha:</label><br>
+    <input type="password" id="signin-password" required><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- Formulário para redefinição de senha -->
+  <h2>Redefinição de Senha</h2>
   <form id="reset-form">
     <label for="email">Email:</label><br>
-    <input type="email" id="reset-email" required placeholder="Exemplo email"><br>
+    <input type="email" id="reset-email" required><br>
     <button type="submit">Enviar Email de Redefinição</button>
   </form>
-</div>
-
-<style>
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white; /* Removendo a transparência */
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 9999;
-  width: 80%;
-  max-width: 400px;
-  transition: transform 0.3s ease; /* Adicionando transição para o efeito de hover */
-}
-
-.popup:hover {
-  transform: scale(1.05); /* Aumentando o tamanho do pop-up no hover */
-}
-
-.popup label,
-.popup input,
-.popup button {
-  display: block;
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.popup button {
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.popup button:hover {
-  background-color: #0056b3;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-}
-
-/* Media query para ajustar o tamanho do pop-up em telas menores */
-@media screen and (max-width: 600px) {
-  .popup {
-    width: 90%;
-  }
-}
-</style>
-
-<script>
-document.getElementById('open-popup').addEventListener('click', function() {
-  document.getElementById('popup').style.display = 'block';
-});
-
-document.getElementById('close-popup').addEventListener('click', function() {
-  document.getElementById('popup').style.display = 'none';
-});
-
-document.getElementById('reset-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  // Add your logic here to handle form submission (e.g., sending reset email)
-});
-</script>
+  <script type="module" src="teste.js"></script>
+</body>
+</html>
