@@ -91,16 +91,17 @@ const auth = getAuth(); // Get the Auth object
     })
  })
 
- 
- document.getElementById('open-popup').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'block';
-  });
-  
-  document.getElementById('close-popup').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
-  });
-  
-  document.getElementById('reset-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // prevent form submission for this example
-    // Add your logic here to handle form submission (e.g., sending reset email)
-  });
+
+ // Redefinição de Senha
+ const resetForm = document.getElementById('reset-form');
+ resetForm.addEventListener('submit', (e) => {
+   e.preventDefault();
+   const email = document.getElementById('reset-email').value;
+   sendPasswordResetEmail(auth, email)
+     .then(() => {
+       console.log("E-mail de redefinição de senha enviado!");
+     })
+     .catch((error) => {
+       console.error(error.message);
+     });
+ });
