@@ -1,6 +1,7 @@
  // Import the functions you need from the SDKs you need
  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
- import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+ import {getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+ import { sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
  import{getFirestore, setDoc, doc} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js"
  
  const firebaseConfig = {
@@ -120,7 +121,7 @@
 
 
 
-  
+
   // Função para enviar e-mail de redefinição de senha
 function sendPasswordResetEmail() {
   const email = document.getElementById("email").value;
