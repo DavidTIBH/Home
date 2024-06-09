@@ -208,6 +208,12 @@ button:hover{
     cursor: pointer;
   }
   
+p{
+
+text-align: center;
+
+}
+
   .popup button:hover {
     background-color: #837c7c;
   }
