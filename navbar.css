@@ -109,33 +109,3 @@ display: none;
   
 }
 }
-
- /* button login */
-.custom-button {
-  background-color: #c2c0c004; /* Laranja */
-  border: none;
-  color: rgb(0, 0, 0);
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: background-color 0.3s;
-}
-
-.custom-button::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.3s;
-  border-radius: 50%;
-  z-index: 1;
-}
