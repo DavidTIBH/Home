@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="main/CFTV/CFTV.css">
     <link rel="stylesheet" href="main/SOBRE/SOBRE.css">
+    <link rel="stylesheet" href="acessorestrito.css">
     <meta name="adopt-website-id" content="72f782a5-4664-404f-a9a6-dbeeab1db9e1" />
     <script src="//tag.goadopt.io/injector.js?website_code=72f782a5-4664-404f-a9a6-dbeeab1db9e1" 
     class="adopt-injector"></script>
@@ -48,11 +49,64 @@
 </nav>
 
 
+<main class="main">
+
+
+  <ul class="menu-categorias">
+    <li><a href="#" onclick="mostrarCategoria('eletronicos')">Eletrônicos</a></li>
+    <li><a href="#" onclick="mostrarCategoria('roupas')">Roupas</a></li>
+  </ul>
+  
+  <div id="categoria-eletronicos" class="categoria ativo">
+    <!-- Produtos eletrônicos aqui -->
+    <div class="produto">
+      <h2>Smartphone XYZ-2000</h2>
+      <p class="descricao">Um smartphone avançado com câmera de alta resolução e processador rápido.</p>
+      <a href="https://exemplo.com/download-smartphone" class="btn" target="_blank">Download</a>
+    </div>
+  
+    <div class="produto">
+      <h2>Notebook UltraSlim 15"</h2>
+      <p class="descricao">Notebook fino e leve, ideal para mobilidade sem comprometer o desempenho.</p>
+      <a href="https://exemplo.com/download-notebook" class="btn" target="_blank">Download</a>
+    </div>
+  
+    <div class="produto">
+      <h2>Fone de Ouvido Bluetooth</h2>
+      <p class="descricao">Fone de ouvido sem fio com cancelamento de ruído e longa duração de bateria.</p>
+      <a href="https://exemplo.com/download-fone" class="btn" target="_blank">Download</a>
+    </div>
+  </div>
+  
+  <div id="categoria-roupas" class="categoria">
+    <!-- Produtos de roupas aqui -->
+    <div class="produto">
+      <h2>Camiseta Casual Estampada</h2>
+      <p class="descricao">Camiseta confortável e estilosa, perfeita para o dia a dia.</p>
+      <a href="https://exemplo.com/download-camiseta" class="btn" target="_blank">Download</a>
+    </div>
+  
+    <div class="produto">
+      <h2>Calça Jeans Skinny</h2>
+      <p class="descricao">Calça jeans ajustada ao corpo, moderna e versátil para diferentes ocasiões.</p>
+      <a href="https://exemplo.com/download-calca-jeans" class="btn" target="_blank">Download</a>
+    </div>
+  
+    <div class="produto">
+      <h2>Vestido de Festa Elegante</h2>
+      <p class="descricao">Vestido sofisticado, ideal para eventos especiais e ocasiões formais.</p>
+      <a href="https://exemplo.com/download-vestido" class="btn" target="_blank">Download</a>
+    </div>
+  </div>
+
+</main>
+
  
    <script src="mobile-navbar.js"></script>  
     <script src="script.js"></script>
     <script src="whats.js"></script>
     <script src="navbar.js"></script>
+    <script src="acessorestrito.js"></script>
   </body> 
 
 
