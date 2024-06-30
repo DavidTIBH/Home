@@ -120,3 +120,60 @@ a:hover {
 }
 }
 
+
+
+
+@media only screen and (max-width: 600px) {/* dispositivo movel */
+
+ 
+  .anuncio {
+    position: fixed;
+    left: 31%;
+    top: 20%;
+    transform: translateX(-50%);
+    max-width: 100%; /* Garante que o anúncio não ultrapasse a largura da tela */
+    padding: 0; /* Removendo o padding para ocupar todo o espaço disponível */
+    border: none; /* Removendo a borda para eliminar qualquer margem extra */
+    box-shadow: none; /* Removendo a sombra para ficar completamente sem bordas */
+    z-index: 1000;
+}
+}
+
+
+@media only screen and (min-width: 601px)
+ {
+
+  .anuncio {
+    position: fixed;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 0; /* Removendo o padding para ocupar todo o espaço disponível */
+    border: none; /* Removendo a borda para eliminar qualquer margem extra */
+    box-shadow: none; /* Removendo a sombra para ficar completamente sem bordas */
+    z-index: 1000;
+}
+}
+
+
+
+
+
+    /* Estilo para o botão de fechar */
+    .fechar {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        color: #000000;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 50%; /* Botão de fechar circular */
+    }
+
+    /* Estilo para o GIF */
+    .gif {
+        width: 100%;
+        height: auto;
+        display: block; /* Garante que o GIF fique em uma linha separada */
+    }

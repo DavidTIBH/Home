@@ -10,3 +10,9 @@ img.onclick = function () {
 modal.onclick = function () {
     modal.style.display = "none";
 };
+
+
+function fecharAnuncio() {
+    var anuncio = document.getElementById('anuncio');
+    anuncio.style.display = 'none';
+}
