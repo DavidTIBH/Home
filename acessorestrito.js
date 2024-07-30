@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     categoriaSelecionada.classList.add('ativo');
   }
  // IDs de acesso permitidos
- var allowedIDs = ["DAVID", "DAVID2", "DAVID3"]; // Adicione quantos IDs quiser aqui
+ var allowedIDs = ["MISTERTECHDAVID", "MISTERTECHDAVID", "MISTERTECHDAVID"]; // Adicione quantos IDs quiser aqui
   
  document.getElementById("form").addEventListener("submit", function(event) {
      event.preventDefault(); // Prevent default form submission
