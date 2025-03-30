@@ -33,9 +33,14 @@ document.getElementById("form").addEventListener("submit", function(event) {
       // If access granted, show the "Bem-vindo" message
       var userName = userNames[accessCode]; // Get the username based on the access code
       var welcomeMessage = "Bem-vindo, " + userName + "!"; // Create the welcome message
-      document.getElementById("navbar-welcome").innerText = welcomeMessage; // Display the welcome message
       
-      // Redirect to your desired HTML file (optional, if needed)
+      // Adicionando a mensagem de boas-vindas na navbar
+      var welcomeElement = document.createElement('div');
+      welcomeElement.id = "welcome-message";
+      welcomeElement.innerText = welcomeMessage;
+      document.querySelector(".navbar").appendChild(welcomeElement); // Adiciona o "Bem-vindo" à navbar
+      
+      // Redireciona para a página de acesso restrito
       window.location.href = "acessorestrito.html";
   } else {
       // If access denied, display error message
