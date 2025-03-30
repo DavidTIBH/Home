@@ -19,12 +19,23 @@ function mostrarCategoria(categoria) {
 // IDs de acesso permitidos
 var allowedIDs = ["MISTERTECHDAVID", "MISTERTECHDAVID", "MISTERTECHDAVID"]; // Adicione quantos IDs quiser aqui
 
+// Nomes associados aos IDs
+var userNames = {
+  "MISTERTECHDAVID": "David"
+};
+
 document.getElementById("form").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent default form submission
   var accessCode = document.getElementById("access-code").value; // Get the value from input field
+  
   // Check if the access code matches any of the allowed IDs
   if (allowedIDs.includes(accessCode)) {
-      // If access granted, redirect to your desired HTML file
+      // If access granted, show the "Bem-vindo" message
+      var userName = userNames[accessCode]; // Get the username based on the access code
+      var welcomeMessage = "Bem-vindo, " + userName + "!"; // Create the welcome message
+      document.getElementById("navbar-welcome").innerText = welcomeMessage; // Display the welcome message
+      
+      // Redirect to your desired HTML file (optional, if needed)
       window.location.href = "acessorestrito.html";
   } else {
       // If access denied, display error message
