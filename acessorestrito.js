@@ -17,7 +17,7 @@ function mostrarCategoria(categoria) {
 }
 
 // IDs de acesso permitidos
-var allowedIDs = ["MISTERTECHDAVID", "MISTERTECHDAVID", "MISTERTECHDAVID"]; // Adicione quantos IDs quiser aqui
+var allowedIDs = ["suportedavid", "suportedavid", "suportedavid"]; // Adicione quantos IDs quiser aqui
 
 document.getElementById("form").addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent default form submission
