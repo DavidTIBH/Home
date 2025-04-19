@@ -1,111 +1,84 @@
-/* Estilos para telas menores */
+header {
+  position: relative; /* Permite posicionar elementos dentro do header */
+  background-image: url('teste1.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+/* CSS */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Estilos da Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 100px;
+}
+
+/* Logo */
+.logo {
+margin-top: 20%;
+  display: flex;
+  width: 480px;
+  height: 300px;
+}
+
+/* Lista de links da navbar */
+.nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para cada link */
+.nav-list li {
+  margin: 0 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 300; /* Peso da fonte */
+  border-radius: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Efeito de hover nos links */
+.nav-list a:hover {
+  color: #f1c40f; /* Altera a cor para um tom dourado ao passar o mouse */
+}
+
+/* Botão Acesso */
+.access-button {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: transparent; /* Transparente por padrão */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.access-button:hover {
+  background-color: #00ff00; /* Verde ao passar o mouse */
+  color: black; /* Texto preto no hover */
+  border-color: #00ff00; /* Borda verde no hover */
+}
+
+/* Ocultar o botão Acesso em resoluções abaixo de 601px */
 @media only screen and (max-width: 600px) {
-  .logo {
-    background-image: url(Consultoriadeinformatica.png);
-    background-repeat: no-repeat;
-    background-color: white;
-    height: 140px;
-    background-position: center;
-    background-size: contain;
+  .access-button {
+    display: none;
   }
-
-  nav {
-    font-family: "Red Hat Display", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    background: #c2c0c038;
-    height: auto; /* Remova a altura fixa */
-    transition: top 0.3s;
-  }
-
-  .nav-list {
-    font-size: 14px;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap; /* Permitir que os itens quebrem em várias linhas */
-    padding: 0;
-    justify-content: left;
-  }
-  
-  .nav-list li {
-    border-bottom:solid 1px #23232e;
-    letter-spacing: 3px;
-    margin-left: 16px; /* Espaço entre as opções */
-  }
-
-  :target:before {
-    content: "";
-    display: block;
-    height: 50px; /* Ajuste conforme necessário */
-    margin: -50px 0 0; /* Ajuste conforme necessário */
-  }
-}
-
-/* Estilos para telas maiores */
-@media only screen and (min-width: 601px) {
-.logo {  background-image: url(Consultoriadeinformatica.png);
-    background-repeat: no-repeat;
-    background-color: white;
-    height: 140px;
-    background-position: center;
-
-  }
-
-  .acesso{
-    /* Login não mostrará em dispositivos desktop */
-display: none;
-
-  }
-
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: "Red Hat Display", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    background: #c2c0c038;
-    height: 8vh;
-    width: 100%;
-    top: 0;
-    transition: top 0.3s;
-  }
-  
-  .nav-list {
-   font-size: 14px;
-    list-style: none;
-    display: flex;
-    justify-content: left;
-  }
-  
-  .nav-list li {
-    letter-spacing: 3px;
-    margin-left: 32px;
-  }
-
-  :target:before {
-  content: "";
-  display: block;
-  height: 50px; /* Ajuste conforme necessário */
-  margin: -50px 0 0; /* Ajuste conforme necessário */
-}
-}
-
-
-
-@media only screen and (max-width: 600px) {
-  
-  .inicioo{
-    /* inicio não mostrará em dispositivos mobiles */
-display: none;
-
-  }
-  
-.navbar-access {
-  /* Sistema login não mostrará em dispositivos mobiles */
-  display: none; 
-  
-}
 }
