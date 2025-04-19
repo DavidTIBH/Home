@@ -7,17 +7,11 @@ header {
   background-position: center top;
 }
 
-/* CSS */
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-}
-
-/* Estilos da Navbar */
+/* Navbar */
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Mantém o espaçamento entre os elementos */
   padding: 10px 20px;
   height: 100px;
 }
@@ -36,6 +30,7 @@ margin-top: 20%;
   display: flex;
   padding: 0;
   margin: 0;
+  gap: 20px; /* Espaçamento entre os links */
 }
 
 /* Estilos para cada link */
@@ -54,31 +49,83 @@ margin-top: 20%;
 
 /* Efeito de hover nos links */
 .nav-list a:hover {
-  color: #f1c40f; /* Altera a cor para um tom dourado ao passar o mouse */
+  color: rgba(7, 245, 59, 0.5);  /* Altera a cor para um tom dourado ao passar o mouse */
 }
+
+
 
 /* Botão Acesso */
 .access-button {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
   font-weight: bold;
-  padding: 10px 20px;
-  border: 2px solid white;
-  border-radius: 5px;
-  background-color: transparent; /* Transparente por padrão */
-  transition: background-color 0.3s, color 0.3s;
+  padding: 10px 40px;
+  border: 1px solid rgba(7, 245, 59, 0.5); /* Borda semitransparente */
+  border-radius: 30px; /* Bordas arredondadas para parecer vidro */
+  background-color: rgba(7, 245, 59, 0.5); /* Fundo semitransparente */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin-left: auto; /* Move o botão para a esquerda */
+  margin-right: 60px; /* Adiciona um pequeno espaçamento à direita */
 }
 
 .access-button:hover {
-  background-color: #00ff00; /* Verde ao passar o mouse */
-  color: black; /* Texto preto no hover */
-  border-color: #00ff00; /* Borda verde no hover */
+  background-color: #2c2c2c; /* Fundo verde ao passar o mouse */
+  color: rgb(255, 255, 255); /* Texto preto no hover */
+  border-color: #313131; /* Borda verde no hover */
 }
 
+button {
+  background-color: transparent;
+  border: 2px solid green; /* opcional: borda verde para dar contraste */
+  color: green; /* cor do texto */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Scrollbar no Chrome, Edge e Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: green; /* cor do scroll */
+  border-radius: 5px;
+}
+
+/* Scrollbar no Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: green #f0f0f0;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Ocultar o botão Acesso em resoluções abaixo de 601px */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px){
+  
+  
+  
   .access-button {
     display: none;
   }
+
+
+
+
+
 }
+
+
