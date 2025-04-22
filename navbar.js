@@ -40,5 +40,15 @@ document.querySelectorAll('[href^="#"]').forEach(anchor => {
     });
 });
 
+let currentSlide = 0;
 
- 
+function moveSlide(direction) {
+  const slides = document.querySelector('.slides');
+  const totalSlides = slides.children.length;
+
+  // Atualiza o índice do slide atual
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+  // Move o slider para o slide correspondente
+  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
