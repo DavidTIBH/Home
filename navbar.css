@@ -7,23 +7,82 @@ header {
   background-position: center top;
 }
 
+/* Contêiner da Logo */
+.logo-container {
+  display: flex;
+  flex-direction: column; /* Empilha a logo e a cópia verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  margin-bottom: 20px; /* Espaço abaixo do contêiner */
+}
+
 /* Navbar */
 nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* Mantém o espaçamento entre os elementos */
+  flex-direction: row; /* Alinha os itens da navbar em linha */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: space-between; /* Espaça os itens da navbar */
+  width: 100%; /* Ocupa toda a largura */
   padding: 10px 20px;
-  height: 100px;
+  height: auto; /* Ajusta a altura automaticamente */
 }
 
-/* Logo */
+/* Logo de Texto */
 .logo {
-margin-top: 20%;
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
+  font-size:150px;
+  font-weight: bold;
+  color: white; /* Cor branca */
+  text-decoration: none;
+  pointer-events: none; /* Impede a seleção do texto */
+  user-select: none; /* Impede a cópia do texto */
   display: flex;
-  width: 480px;
-  height: 300px;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-bottom: 10px; /* Espaço abaixo da logo */
+  margin-top: 50px; /* Espaço acima da logo */
+  margin-left: 30px
 }
 
+/* Cópia da Logo */
+.logo-copy {
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
+  font-size: 20px;
+  font-weight: bold;
+  color: white; /* Cor branca */
+  text-decoration: none;
+  pointer-events: none; /* Impede a seleção do texto */
+  user-select: none; /* Impede a cópia do texto */
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  margin-bottom: 10px; /* Espaço abaixo da cópia */
+}
+
+.logo::before {
+  content: "MTech"; /* Adiciona o texto como conteúdo */
+  pointer-events: none; /* Impede a interação com o texto */
+}
+.logo-copy::before {
+  content: "Soluções em informática"; /* Adiciona o texto como conteúdo */
+  pointer-events: none; /* Impede a interação com o texto */
+}
+
+/* Texto abaixo da logo */
+.info {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px; /* Tamanho da fonte */
+  color: white; /* Cor branca */
+  text-align: center; /* Centraliza o texto */
+  margin: 0; /* Remove margens padrão */
+
+}
+.info::before {
+  content: "MTech"; /* Adiciona o texto como conteúdo */
+  pointer-events: none; /* Impede a interação com o texto */
+  font-size: 18px; /* Tamanho da fonte */
+  color: white; /* Cor branca */
+  text-align: center; /* Centraliza o texto */
+  margin: 0;} /* }Remove margens padrão */
 /* Lista de links da navbar */
 .nav-list {
   list-style: none;
@@ -35,7 +94,7 @@ margin-top: 20%;
 
 /* Estilos para cada link */
 .nav-list li {
-  margin: 0 20px;
+  margin: 0; /* Remove margens laterais */
 }
 
 .nav-list a {
@@ -49,10 +108,8 @@ margin-top: 20%;
 
 /* Efeito de hover nos links */
 .nav-list a:hover {
-  color: rgba(7, 245, 59, 0.5);  /* Altera a cor para um tom dourado ao passar o mouse */
+  color: rgba(7, 245, 59, 0.5); /* Altera a cor para um tom dourado ao passar o mouse */
 }
-
-
 
 /* Botão Acesso */
 .access-button {
@@ -65,8 +122,7 @@ margin-top: 20%;
   border-radius: 30px; /* Bordas arredondadas para parecer vidro */
   background-color: rgba(7, 245, 59, 0.5); /* Fundo semitransparente */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  margin-left: auto; /* Move o botão para a esquerda */
-  margin-right: 60px; /* Adiciona um pequeno espaçamento à direita */
+  margin-right: 70px;* Espaço à direita do botão */
 }
 
 .access-button:hover {
