@@ -191,7 +191,7 @@ button {
   height: 12px;
   width: 12px;
   margin: 0 5px;
-  background-color: rgb(122, 195, 255);
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.3s;
@@ -199,5 +199,5 @@ button {
 }
 
 .dot.active {
-  background-color: #ffffff;
+  background-color: rgb(122, 195, 255);
 }
