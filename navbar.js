@@ -40,15 +40,40 @@ document.querySelectorAll('[href^="#"]').forEach(anchor => {
     });
 });
 
-let currentSlide = 0;
 
-function moveSlide(direction) {
-  const slides = document.querySelector('.slides');
-  const totalSlides = slides.children.length;
 
-  // Atualiza o índice do slide atual
-  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
 
-  // Move o slider para o slide correspondente
-  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+//Efeito do SLIDE
+const slides = document.querySelector('.slides');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+const totalSlides = dots.length;
+
+function showSlide(index) {
+  if (index >= totalSlides) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = totalSlides - 1;
+  } else {
+    currentIndex = index;
+  }
+
+  slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentIndex].classList.add('active');
 }
+
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    showSlide(index);
+  });
+});
+
+showSlide(currentIndex);
+setInterval(nextSlide, 6000); // Troca a cada 3 segundos
+//acaba o efeito do slide

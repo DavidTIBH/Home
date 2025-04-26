@@ -1,18 +1,10 @@
 header {
   position: relative; /* Permite posicionar elementos dentro do header */
-  background-image: url('teste1.jpg');
+  background-image: url('fd37ab5c638646d933e18f7ef542aa61.jpg');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
-}
-
-/* Contêiner da Logo */
-.logo-container {
-  display: flex;
-  flex-direction: column; /* Empilha a logo e a cópia verticalmente */
-  align-items: center; /* Centraliza horizontalmente */
-  margin-bottom: 20px; /* Espaço abaixo do contêiner */
 }
 
 /* Navbar */
@@ -28,10 +20,10 @@ nav {
 
 /* Logo de Texto */
 .logo {
-  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
+   font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
   font-size:150px;
   font-weight: bold;
-  color: white; /* Cor branca */
+  color: rgb(255, 255, 255); /* Cor branca */
   text-decoration: none;
   pointer-events: none; /* Impede a seleção do texto */
   user-select: none; /* Impede a cópia do texto */
@@ -40,7 +32,7 @@ nav {
   justify-content: center; /* Centraliza horizontalmente */
   margin-bottom: 10px; /* Espaço abaixo da logo */
   margin-top: 50px; /* Espaço acima da logo */
-  margin-left: 30px
+  margin-left: 80px
 }
 
 /* Cópia da Logo */
@@ -108,7 +100,7 @@ nav {
 
 /* Efeito de hover nos links */
 .nav-list a:hover {
-  color: rgba(7, 245, 59, 0.5); /* Altera a cor para um tom dourado ao passar o mouse */
+  color: rgb(122, 195, 255); /* Altera a cor para um tom dourado ao passar o mouse */
 }
 
 /* Botão Acesso */
@@ -133,8 +125,8 @@ nav {
 
 button {
   background-color: transparent;
-  border: 2px solid green; /* opcional: borda verde para dar contraste */
-  color: green; /* cor do texto */
+  border: 2px solid rgb(122, 195, 255); /* opcional: borda verde para dar contraste */
+  color: rgb(122, 195, 255); /* cor do texto */
   padding: 10px 20px;
 
   cursor: pointer;
@@ -143,97 +135,69 @@ button {
       box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3); /* <- sombra interna */
 }
 
-/* Slider de Imagens */
-.slider {
-  margin-top: 12%;
-  position: relative;
-  width: 100%;
-  height: 600px; /* Altura do slider */
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out; /* Animação suave */
-}
-
-.slide {
-  min-width: 100%; /* Cada slide ocupa 100% da largura do slider */
-  height: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta a imagem para cobrir o slide */
-}
-
-/* Botões de navegação */
-button.prev,
-button.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 50%;
-}
-
-button.prev {
-  left: 10px; /* Botão da esquerda */
-}
-
-button.next {
-  right: 10px; /* Botão da direita */
-}
-
-button.prev:hover,
-button.next:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro no hover */
-}
-
-/* Responsividade */
-@media only screen and (max-width: 768px) {
-  .slider {
-    height: 300px; /* Reduz a altura do slider em telas menores */
-  }
-
-  button.prev,
-  button.next {
-    padding: 8px; /* Botões menores em telas menores */
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .slider {
-    height: 200px; /* Reduz ainda mais a altura do slider */
-  }
-
-  button.prev,
-  button.next {
-    padding: 6px; /* Botões ainda menores */
-  }
-}
 
 /* Ocultar o botão Acesso em resoluções abaixo de 601px */
 @media only screen and (max-width: 600px){
-  
-  
   
   .access-button {
     display: none;
   }
 
 
-
-
-
-
-
-
   
+}
+
+
+
+
+.body {  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* mudar para flex-start */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+/* Estilos para o slider */
+.slider {
+  position: relative;
+  width: 100%;
+  height: auto; /* Ajusta automaticamente com base no conteúdo */
+  max-height: 600px; /* Define o limite máximo de altura */
+  overflow: hidden;
+  margin-top: 16px; /* Espaçamento acima do slider */
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: rgb(122, 195, 255);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ffffff;
 }
