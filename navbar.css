@@ -223,6 +223,16 @@ button {
 
 /* Responsividade para telas menores */
 @media only screen and (max-width: 599px) {
+
+  header {
+    position: relative; /* Permite posicionar elementos dentro do header */
+    background-image: url('fd37ab5c638646d933e18f7ef542aa61.jpg');
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }  
+
   nav {
     flex-direction: column; /* Mantém a navbar empilhada verticalmente */
     align-items: center; /* Centraliza os itens */
@@ -238,7 +248,8 @@ button {
   .logo-copy {
     font-size: 16px; /* Texto menor */
     margin-bottom: 5px;
-    -webkit-text-fill-color: rgba(77, 154, 218, 0.678);
+    margin-bottom: 40px;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.678);
   }
 
   .nav-list {
@@ -259,7 +270,7 @@ button {
     font-size: 18px; /* Ajusta o tamanho da fonte */
     text-align: center; /* Centraliza o texto */
     text-decoration: none;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.678);
+
   }
 
   .access-button {
@@ -267,8 +278,17 @@ button {
   }
 
   .slider {
+    margin-top: 25px; /* Remove o espaçamento acima do slider */
     max-height: 300px; /* Reduz altura do slider */
   }
 
-
+  .dots {
+    position: static; /* Remove o posicionamento absoluto */
+    margin-top: 10px; /* Adiciona espaçamento acima das bolinhas */
+    display: flex;
+    justify-content: center; /* Centraliza as bolinhas horizontalmente */
+    align-items: center; /* Centraliza verticalmente (caso necessário) */
+    gap: 7px; /* Espaçamento entre as bolinhas */
+    margin-left: 60px;
+  }  
 }
