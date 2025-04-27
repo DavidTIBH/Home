@@ -75,5 +75,5 @@ dots.forEach((dot, index) => {
 });
 
 showSlide(currentIndex);
-setInterval(nextSlide, 6000); // Troca a cada 3 segundos
+setInterval(nextSlide, 7000); // Troca a cada 6 segundos
 //acaba o efeito do slide
