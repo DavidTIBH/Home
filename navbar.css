@@ -18,47 +18,76 @@ nav {
   height: auto; /* Ajusta a altura automaticamente */
 }
 
-/* Logo de Texto */
+/* Contêiner das logos */
+.logo-container {
+  display: flex; /* Alinha os itens horizontalmente */
+  flex-direction: row; /* Alinha os elementos lado a lado */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente no contêiner */
+  gap: 2px; /* Espaçamento entre "M" e "Tech" */
+  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+}
+
+/* Alinha "M" e "Tech" lado a lado */
+.logo3,
 .logo {
-  border: solid 2px white;
-  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
-  font-size: 150px;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  font-size: 130px;
   font-weight: bold;
   color: rgb(255, 255, 255); /* Cor branca */
   text-decoration: none;
   pointer-events: none; /* Impede a seleção do texto */
   user-select: none; /* Impede a cópia do texto */
-  display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  margin-bottom: 10px; /* Espaço abaixo da logo */
-  margin-top: 50px; /* Espaço acima da logo */
-  margin-left: 80px;
+  margin: 0; /* Remove margens extras */
 }
 
-/* Cópia da Logo */
-.logo-copy {
-  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif; /* Fonte arredondada */
-  font-size: 20px;
-  font-weight: bold;
-  color: white; /* Cor branca */
-  text-decoration: none;
-  pointer-events: none; /* Impede a seleção do texto */
-  user-select: none; /* Impede a cópia do texto */
+.logo3 {  width: 130px; /* Define a largura do quadrado */
+  height: 130px; /* Define a altura do quadrado */
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  margin-bottom: 10px; /* Espaço abaixo da cópia */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  font-size: 130px;
+  font-weight: bold;
+  border: solid 2px rgb(255, 255, 255); /* Borda branca */
+  box-sizing: border-box; /* Inclui a borda no tamanho total */
+  text-align: center;
+  -webkit-text-fill-color: rgba(4, 138, 247, 0.678);
+  border: solid 2px rgb(255, 255, 255); /* Borda azul clara */
+  margin-top: 20px;
+
+}
+.logo{
+  margin-top: 90px;
+
+
+}
+
+/* Texto abaixo das logos */
+.logo-copy {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px; /* Tamanho do texto */
+  color: white; /* Cor branca */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 10px; /* Espaçamento acima do texto */
+  pointer-events: none; /* Impede a interação com o texto */
+  user-select: none; /* Impede a cópia do texto */
+  width: 100%; /* Garante que o texto ocupe toda a largura abaixo das logos */
+}
+
+.logo3::before {
+  content: "M"; /* Adiciona o texto "M" */
 }
 
 .logo::before {
-  content: "MTech"; /* Adiciona o texto como conteúdo */
-  pointer-events: none; /* Impede a interação com o texto */
+  content: "Tech"; /* Adiciona o texto "Tech" */
 }
 
 .logo-copy::before {
-  content: "Consultoria em informática"; /* Adiciona o texto como conteúdo */
-  pointer-events: none; /* Impede a interação com o texto */
+  content: ""; /* Adiciona o texto abaixo */
 }
 
 /* Texto abaixo da logo */
