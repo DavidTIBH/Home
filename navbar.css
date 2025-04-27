@@ -206,7 +206,7 @@ button {
 }
 
 .dot.active {
-  background-color: rgb(122, 195, 255);
+  background-color:rgba(4, 138, 247, 0.678);
 }
 
 /* Container principal */
@@ -238,6 +238,7 @@ button {
   .logo-copy {
     font-size: 16px; /* Texto menor */
     margin-bottom: 5px;
+    -webkit-text-fill-color: rgba(77, 154, 218, 0.678);
   }
 
   .nav-list {
@@ -258,7 +259,7 @@ button {
     font-size: 18px; /* Ajusta o tamanho da fonte */
     text-align: center; /* Centraliza o texto */
     text-decoration: none;
-    color: white;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.678);
   }
 
   .access-button {
@@ -268,4 +269,6 @@ button {
   .slider {
     max-height: 300px; /* Reduz altura do slider */
   }
+
+
 }
