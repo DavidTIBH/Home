@@ -1,22 +1,4 @@
-header {
-  position: relative; /* Permite posicionar elementos dentro do header */
-  background-image: url('fd37ab5c638646d933e18f7ef542aa61.jpg');
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-}
 
-/* Navbar */
-nav {
-  display: flex;
-  flex-direction: row; /* Alinha os itens da navbar em linha */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: space-between; /* Espaça os itens da navbar */
-  width: 100%; /* Ocupa toda a largura */
-  padding: 10px 20px;
-  height: auto; /* Ajusta a altura automaticamente */
-}
 
 /* Contêiner das logos */
 .logo-container {
@@ -99,6 +81,29 @@ nav {
   margin: 0; /* Remove margens padrão */
 }
 
+
+
+
+header {
+  position: relative; /* Permite posicionar elementos dentro do header */
+  background-image: url('fd37ab5c638646d933e18f7ef542aa61.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  flex-direction: row; /* Alinha os itens da navbar em linha */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: space-between; /* Espaça os itens da navbar */
+  width: 100%; /* Ocupa toda a largura */
+  padding: 10px 20px;
+  height: auto; /* Ajusta a altura automaticamente */
+}
+
 /* Lista de links da navbar */
 .nav-list {
   list-style: none;
@@ -116,7 +121,7 @@ nav {
 .nav-list a {
   text-decoration: none;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 300; /* Peso da fonte */
   border-radius: 5px;
   transition: color 0.3s ease, transform 0.3s ease;
