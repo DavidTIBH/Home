@@ -224,8 +224,8 @@ button {
 /* Responsividade para telas menores */
 @media only screen and (max-width: 599px) {
   nav {
-    flex-direction: column; /* Alinha verticalmente */
-    align-items: center;
+    flex-direction: column; /* Mantém a navbar empilhada verticalmente */
+    align-items: center; /* Centraliza os itens */
     justify-content: center;
   }
 
@@ -241,12 +241,24 @@ button {
   }
 
   .nav-list {
-    flex-direction: column; /* Links um abaixo do outro */
-    gap: 10px;
+    display: flex; /* Alinha os itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens passem para a próxima linha, se necessário */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre os links */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove os marcadores da lista */
+  }
+
+  .nav-list li {
+    margin: 0; /* Remove margens extras */
   }
 
   .nav-list a {
-    font-size: 20px;
+    font-size: 18px; /* Ajusta o tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none;
+    color: white;
   }
 
   .access-button {
