@@ -58,7 +58,7 @@ nav {
 }
 
 .logo-copy::before {
-  content: "Consultoria em Tecnologia da informação"; /* Adiciona o texto como conteúdo */
+  content: "Consultoria"; /* Adiciona o texto como conteúdo */
   pointer-events: none; /* Impede a interação com o texto */
 }
 
