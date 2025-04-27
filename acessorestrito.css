@@ -55,3 +55,12 @@
     text-decoration: none;
     float: right; /* Alinha o botão à direita */
   }
+
+  /* body {
+  min-height: auto !important;
+}
+  Ou deixar o css a baixo de todos, ele irá sobrescrever o css anterior.*/
+ .body {
+    min-height: auto;
+  }
+  
