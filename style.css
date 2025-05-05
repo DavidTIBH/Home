@@ -177,3 +177,18 @@ a:hover {
         height: auto;
         display: block; /* Garante que o GIF fique em uma linha separada */
     }
+    
+/* Scrollbar no Chrome, Edge e Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: green; /* cor do scroll */
+  border-radius: 5px;
+}
+/* Scrollbar no Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: green;
+}
