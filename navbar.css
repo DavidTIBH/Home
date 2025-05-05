@@ -1,299 +1,111 @@
-
-
-/* Contêiner das logos */
-.logo-container {
-  display: flex; /* Alinha os itens horizontalmente */
-  flex-direction: row; /* Alinha os elementos lado a lado */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente no contêiner */
-  gap: 2px; /* Espaçamento entre "M" e "Tech" */
-  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
-}
-
-/* Alinha "M" e "Tech" lado a lado */
-.logo3,
-.logo {
-  display: flex;
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
-  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
-  font-size: 130px;
-  font-weight: bold;
-  color: rgb(255, 255, 255); /* Cor branca */
-  text-decoration: none;
-  pointer-events: none; /* Impede a seleção do texto */
-  user-select: none; /* Impede a cópia do texto */
-  margin: 0; /* Remove margens extras */
-}
-
-.logo3 {  width: 130px; /* Define a largura do quadrado */
-  height: 130px; /* Define a altura do quadrado */
-  display: flex;
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
-  font-size: 130px;
-  font-weight: bold;
-  border: solid 2px rgb(255, 255, 255); /* Borda branca */
-  box-sizing: border-box; /* Inclui a borda no tamanho total */
-  text-align: center;
-  -webkit-text-fill-color: rgba(4, 138, 247, 0.678);
-  border: solid 2px rgb(255, 255, 255); /* Borda azul clara */
-  margin-top: 20px;
-
-}
-.logo{
-  margin-top: 90px;
-
-
-}
-
-/* Texto abaixo das logos */
-.logo-copy {
-  font-family: 'Arial', sans-serif;
-  font-size: 20px; /* Tamanho do texto */
-  color: white; /* Cor branca */
-  text-align: center; /* Centraliza o texto */
-  margin-top: 10px; /* Espaçamento acima do texto */
-  pointer-events: none; /* Impede a interação com o texto */
-  user-select: none; /* Impede a cópia do texto */
-  width: 100%; /* Garante que o texto ocupe toda a largura abaixo das logos */
-}
-
-.logo3::before {
-  content: "M"; /* Adiciona o texto "M" */
-}
-
-.logo::before {
-  content: "Tech"; /* Adiciona o texto "Tech" */
-}
-
-.logo-copy::before {
-  content: ""; /* Adiciona o texto abaixo */
-}
-
-/* Texto abaixo da logo */
-.info {
-  font-family: 'Arial', sans-serif;
-  font-size: 18px; /* Tamanho da fonte */
-  color: white; /* Cor branca */
-  text-align: center; /* Centraliza o texto */
-  margin: 0; /* Remove margens padrão */
-}
-
-
-
-
-header {
-  position: relative; /* Permite posicionar elementos dentro do header */
-  background-image: url('fd37ab5c638646d933e18f7ef542aa61.jpg');
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
-}
-
-/* Navbar */
-nav {
-  display: flex;
-  flex-direction: row; /* Alinha os itens da navbar em linha */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: space-between; /* Espaça os itens da navbar */
-  width: 100%; /* Ocupa toda a largura */
-  padding: 10px 20px;
-  height: auto; /* Ajusta a altura automaticamente */
-}
-
-/* Lista de links da navbar */
-.nav-list {
-  list-style: none;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  gap: 20px; /* Espaçamento entre os links */
-}
-
-/* Estilos para cada link */
-.nav-list li {
-  margin: 0; /* Remove margens laterais */
-}
-
-.nav-list a {
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  font-weight: 300; /* Peso da fonte */
-  border-radius: 5px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-/* Efeito de hover nos links */
-.nav-list a:hover {
-  color: rgb(122, 195, 255); /* Altera a cor para um tom azul ao passar o mouse */
-  transform: translateY(-3px); /* Animação de leve subida */
-}
-
-/* Botão Acesso */
-.access-button {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  font-weight: bold;
-  padding: 10px 40px;
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Borda semitransparente */
-  border-radius: 30px; /* Bordas arredondadas para parecer vidro */
-  background-color: rgba(255, 255, 255, 0.5); /* Fundo semitransparente */
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  margin-right: 70px; /* Espaço à direita do botão */
-}
-
-.access-button:hover {
-  background-color: rgba(255, 255, 255, 0.5); /* Fundo semitransparente no hover */
-  color: rgb(255, 255, 255); /* Texto branco no hover */
-  border-color: rgba(255, 255, 255, 0.5); /* Borda semitransparente no hover */
-}
-
-/* Estilo de botões gerais */
-button {
-  background-color: transparent;
-  border: 2px solid rgb(122, 195, 255); /* opcional: borda azul clara para contraste */
-  color: rgb(122, 195, 255); /* cor do texto */
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 8px;
-  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.3); /* sombra interna */
-}
-
-/* Estilos para o slider */
-.slider {
-  position: relative;
-  width: 100%;
-  height: auto; /* Ajusta automaticamente com base no conteúdo */
-  max-height: 600px; /* Define o limite máximo de altura */
-  overflow: hidden;
-  margin-top: 16px; /* Espaçamento acima do slider */
-  pointer-events: none; /* Desativa todas as interações do mouse no slider */
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: 95%;
-  display: block;
-}
-
-.dots {
-  position: absolute; /* Permite posicionar as bolinhas dentro do slider */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta para centralizar corretamente */
-  display: flex;
-  gap: 10px; /* Espaçamento entre as bolinhas */
-  pointer-events: auto; /* Reativa as interações do mouse nos dots */
-}
-
-.dot {
-  height: 12px;
-  width: 12px;
-  margin: 0 5px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s;
-  cursor: pointer; /* Mostra o cursor de clique nos dots */
-}
-
-.dot.active {
-  background-color:rgba(4, 138, 247, 0.678);
-}
-
-/* Container principal */
-.body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  padding: 0 10px; /* Respiro nas laterais para telas pequenas */
-  box-sizing: border-box;
-}
-
-/* Responsividade para telas menores */
-@media only screen and (max-width: 599px) {
-
-  header {
-    position: relative; /* Permite posicionar elementos dentro do header */
-    background-image: url('fd37ab5c638646d933e18f7ef542aa61.jpg');
-    height: 60vh;
+/* Estilos para telas menores */
+@media only screen and (max-width: 600px) {
+  .logo {
+    background-image: url(Consultoriadeinformatica.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-  }  
+    background-color: white;
+    height: 140px;
+    background-position: center;
+    background-size: contain;
+  }
 
   nav {
-    flex-direction: column; /* Mantém a navbar empilhada verticalmente */
-    align-items: center; /* Centraliza os itens */
-    justify-content: center;
-  }
-
-  .logo {
-    font-size: 80px; /* Diminui tamanho da logo */
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .logo-copy {
-    font-size: 16px; /* Texto menor */
-    margin-bottom: 5px;
-    margin-bottom: 40px;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.678);
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background: #c2c0c038;
+    height: auto; /* Remova a altura fixa */
+    transition: top 0.3s;
   }
 
   .nav-list {
-    display: flex; /* Alinha os itens horizontalmente */
-    flex-wrap: wrap; /* Permite que os itens passem para a próxima linha, se necessário */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    gap: 10px; /* Espaçamento entre os links */
-    padding: 0;
-    margin: 0;
-    list-style: none; /* Remove os marcadores da lista */
-  }
-
-  .nav-list li {
-    margin: 0; /* Remove margens extras */
-  }
-
-  .nav-list a {
-    font-size: 18px; /* Ajusta o tamanho da fonte */
-    text-align: center; /* Centraliza o texto */
-    text-decoration: none;
-
-  }
-
-  .access-button {
-    display: none; /* Esconde botão de acesso */
-  }
-
-  .slider {
-    margin-top: 25px; /* Remove o espaçamento acima do slider */
-    max-height: 300px; /* Reduz altura do slider */
-  }
-
-  .dots {
-    position: static; /* Remove o posicionamento absoluto */
-    margin-top: 10px; /* Adiciona espaçamento acima das bolinhas */
+    font-size: 14px;
+    list-style: none;
     display: flex;
-    justify-content: center; /* Centraliza as bolinhas horizontalmente */
-    align-items: center; /* Centraliza verticalmente (caso necessário) */
-    gap: 7px; /* Espaçamento entre as bolinhas */
-    margin-left: 60px;
-  }  
+    flex-wrap: wrap; /* Permitir que os itens quebrem em várias linhas */
+    padding: 0;
+    justify-content: left;
+  }
+  
+  .nav-list li {
+    border-bottom:solid 1px #23232e;
+    letter-spacing: 3px;
+    margin-left: 16px; /* Espaço entre as opções */
+  }
+
+  :target:before {
+    content: "";
+    display: block;
+    height: 50px; /* Ajuste conforme necessário */
+    margin: -50px 0 0; /* Ajuste conforme necessário */
+  }
+}
+
+/* Estilos para telas maiores */
+@media only screen and (min-width: 601px) {
+.logo {  background-image: url(Consultoriadeinformatica.png);
+    background-repeat: no-repeat;
+    background-color: white;
+    height: 140px;
+    background-position: center;
+
+  }
+
+  .acesso{
+    /* Login não mostrará em dispositivos desktop */
+display: none;
+
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background: #c2c0c038;
+    height: 8vh;
+    width: 100%;
+    top: 0;
+    transition: top 0.3s;
+  }
+  
+  .nav-list {
+   font-size: 14px;
+    list-style: none;
+    display: flex;
+    justify-content: left;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+
+  :target:before {
+  content: "";
+  display: block;
+  height: 50px; /* Ajuste conforme necessário */
+  margin: -50px 0 0; /* Ajuste conforme necessário */
+}
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  
+  .inicioo{
+    /* inicio não mostrará em dispositivos mobiles */
+display: none;
+
+  }
+  
+.navbar-access {
+  /* Sistema login não mostrará em dispositivos mobiles */
+  display: none; 
+  
+}
 }
